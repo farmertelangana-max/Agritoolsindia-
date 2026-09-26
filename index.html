@@ -53,6 +53,7 @@
       --shadow: 0 4px 20px rgba(0,0,0,0.08);
       --radius: 14px;
       --header-h: 64px;
+      --bottomnav-h: 60px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -584,6 +585,14 @@
       flex-wrap: wrap;
     }
     .admin-list-item span { font-size: 0.9rem; }
+    .admin-tabs { display: flex; gap: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--border); }
+    .admin-tab {
+      padding: 10px 16px; font-weight: 600; font-size: 0.9rem; color: var(--muted);
+      border-bottom: 2px solid transparent; background: none;
+    }
+    .admin-tab.active { color: var(--green-900); border-bottom-color: var(--green-800); }
+    .admin-section { display: none; }
+    .admin-section.active { display: block; }
 
     /* Modal blog */
     .modal {
@@ -615,6 +624,76 @@
     .modal-box h2 { color: var(--green-900); margin-bottom: 12px; padding-right: 30px; }
     .modal-box p { margin-bottom: 12px; color: var(--muted); line-height: 1.7; }
 
+    /* Welcome offer popup */
+    .offer-popup {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 2500;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .offer-popup.open { display: flex; }
+    .offer-popup-box {
+      background: #fff;
+      border-radius: 18px;
+      max-width: 380px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+      animation: popIn 0.25s ease;
+    }
+    @keyframes popIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .offer-popup-close {
+      position: absolute; top: 10px; right: 10px;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(0,0,0,0.45); color: #fff;
+      font-size: 1.3rem; line-height: 1; display: grid; place-items: center;
+      z-index: 2;
+    }
+    .offer-popup-img {
+      height: 160px;
+      background: url('https://agritools-bazaar.lovable.app/assets/flat-drip-BIT5Ge41.jpg') center/cover;
+    }
+    .offer-popup-body { padding: 22px 20px 26px; text-align: center; }
+    .offer-popup-body .offer-badge { margin-bottom: 8px; }
+    .offer-popup-body h3 { font-size: 1.3rem; color: var(--green-900); margin-bottom: 4px; }
+    .offer-popup-body .offer-price { font-size: 1.9rem; margin: 6px 0; }
+    .offer-popup-body .offer-note { margin-bottom: 16px; }
+    .offer-popup-btns { display: flex; flex-direction: column; gap: 10px; }
+
+    /* Bottom app nav (mobile) */
+    .bottom-nav {
+      display: flex;
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      height: var(--bottomnav-h);
+      background: #fff;
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+      z-index: 900;
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    .bottom-nav a {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--muted);
+      padding: 6px 2px;
+    }
+    .bottom-nav a .bn-icon { font-size: 1.25rem; line-height: 1; }
+    .bottom-nav a.active { color: var(--green-800); }
+    .bottom-nav a.bn-wa { color: var(--whatsapp); }
+    body { padding-bottom: var(--bottomnav-h); }
+
     /* Responsive */
     @media (min-width: 768px) {
       .hamburger { display: none; }
@@ -624,6 +703,8 @@
       .contact-wrap { grid-template-columns: 1fr 1.3fr; }
       .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
       .hero { min-height: 560px; }
+      .bottom-nav { display: none; }
+      body { padding-bottom: 0; }
     }
     @media (min-width: 1024px) {
       .nav-desktop a { font-size: 0.8rem; padding: 6px 8px; }
@@ -683,6 +764,24 @@
     <div class="menu-actions">
       <a href="tel:+919849735864" class="btn-call">📞 Call Now – 9849735864</a>
       <a href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20%E0%B0%A8%E0%B0%BE%E0%B0%95%E0%B1%81%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- WELCOME OFFER POPUP -->
+  <div class="offer-popup" id="offerPopup">
+    <div class="offer-popup-box">
+      <button class="offer-popup-close" onclick="closeOfferPopup()" aria-label="Close">&times;</button>
+      <div class="offer-popup-img"></div>
+      <div class="offer-popup-body">
+        <span class="offer-badge">SPECIAL OFFER</span>
+        <h3>1 Acre Drip Kit</h3>
+        <div class="offer-price telugu">₹9,999 మాత్రమే</div>
+        <p class="offer-note telugu">పరిమిత స్టాక్ – ముందుగా బుక్ చేసుకోండి</p>
+        <div class="offer-popup-btns">
+          <a href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20%E2%82%B99%2C999%20%E0%B0%92%E0%B0%95%20%E0%B0%8E%E0%B0%95%E0%B0%B0%E0%B0%82%20%E0%B0%A1%E0%B1%8D%E0%B0%B0%E0%B0%BF%E0%B0%AA%E0%B1%8D%20%E0%B0%95%E0%B0%BF%E0%B0%9F%E0%B1%8D%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." class="btn-wa" style="padding:12px;border-radius:999px;justify-content:center;" target="_blank" rel="noopener">💬 WhatsApp Enquiry</a>
+          <a href="tel:+919849735864" class="btn-call" style="padding:12px;border-radius:999px;justify-content:center;">📞 Call Now</a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1022,12 +1121,21 @@
     </div>
   </footer>
 
+  <!-- BOTTOM APP NAV (mobile) -->
+  <nav class="bottom-nav" id="bottomNav" aria-label="App navigation">
+    <a href="#home" class="bn-link active"><span class="bn-icon">🏠</span>Home</a>
+    <a href="#products" class="bn-link"><span class="bn-icon">🛒</span>Products</a>
+    <a href="#blog" class="bn-link"><span class="bn-icon">📰</span>Blog</a>
+    <a href="#contact" class="bn-link"><span class="bn-icon">☎️</span>Contact</a>
+    <a href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20%E0%B0%A8%E0%B0%BE%E0%B0%95%E0%B1%81%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." class="bn-wa" target="_blank" rel="noopener"><span class="bn-icon">💬</span>WhatsApp</a>
+  </nav>
+
   <!-- ADMIN PANEL -->
   <div class="admin-panel" id="adminPanel">
     <div class="admin-box">
-      <h2>Product Admin – ప్రొడక్ట్ నిర్వహణ</h2>
+      <h2>Admin – నిర్వహణ</h2>
       <div class="admin-note">
-        <strong>ఫోటో + ధర జోడించవచ్చు / మార్చవచ్చు.</strong><br>
+        <strong>ప్రొడక్ట్స్ మరియు బ్లాగ్ పోస్ట్‌లు రెండూ ఇక్కడి నుండి నిర్వహించవచ్చు.</strong><br>
         Supabase తో కనెక్ట్ అయింది – మార్పులు అన్ని డివైస్‌లలో కనిపిస్తాయి.
       </div>
 
@@ -1047,56 +1155,104 @@
         </div>
       </div>
 
-      <form class="admin-form" id="adminForm" onsubmit="return saveProduct(event)" style="display:none">
-        <input type="hidden" id="editId">
-        <div class="form-group">
-          <label>Product Name</label>
-          <input type="text" id="pName" required>
+      <div id="adminLoggedIn" style="display:none">
+        <div class="admin-tabs">
+          <button type="button" class="admin-tab active" id="tabProductsBtn" onclick="switchAdminTab('products')">Products</button>
+          <button type="button" class="admin-tab" id="tabBlogBtn" onclick="switchAdminTab('blog')">Blog Posts</button>
         </div>
-        <div class="form-group">
-          <label>Description</label>
-          <textarea id="pDesc" rows="2"></textarea>
+
+        <!-- PRODUCTS TAB -->
+        <div class="admin-section active" id="tabProducts">
+          <form class="admin-form" id="adminForm" onsubmit="return saveProduct(event)">
+            <input type="hidden" id="editId">
+            <div class="form-group">
+              <label>Product Name</label>
+              <input type="text" id="pName" required>
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <textarea id="pDesc" rows="2"></textarea>
+            </div>
+            <div class="form-group">
+              <label>ధర / Price (ఉదా: ₹1,500 లేదా Contact for Price)</label>
+              <input type="text" id="pPrice" placeholder="₹1,500 లేదా Contact for Price">
+            </div>
+            <div class="form-group">
+              <label>ఇమేజ్ URL / Image URL (ఫోటో లింక్ పేస్ట్ చేయండి)</label>
+              <input type="url" id="pImage" placeholder="https://example.com/photo.jpg">
+              <small style="display:block;margin-top:4px;color:#666;font-size:0.8rem;">ఇమేజ్ లింక్ పేస్ట్ చేస్తే ప్రొడక్ట్ ఫోటో మారుతుంది. కొత్త ప్రొడక్ట్‌కు కూడా ఇమేజ్ + ధర జోడించవచ్చు.</small>
+            </div>
+            <div class="form-group">
+              <label>📷 గ్యాలరీ / కెమెరా నుండి ఫోటో (Upload from gallery)</label>
+              <input type="file" id="pFile" accept="image/*">
+              <img id="pPreview" alt="" style="display:none;max-width:140px;margin-top:8px;border-radius:8px">
+            </div>
+            <div class="form-group">
+              <label>Category</label>
+              <select id="pCategory">
+                <option>Drip Irrigation</option>
+                <option>Sprinklers</option>
+                <option>Rain Guns</option>
+                <option>Farm Tools &amp; Machinery</option>
+                <option>PVC &amp; Fittings</option>
+                <option>Filters</option>
+                <option>Mulching</option>
+                <option>Weed Mat</option>
+                <option>Lapeta / Rain Pipe</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label><input type="checkbox" id="pFeatured"> Mark as Featured</label>
+            </div>
+            <div class="admin-actions">
+              <button type="submit" class="btn-admin btn-save">Save Product</button>
+              <button type="button" class="btn-admin btn-cancel" onclick="resetAdminForm()">New / Clear</button>
+              <button type="button" class="btn-admin btn-delete" id="deleteBtn" style="display:none;" onclick="deleteCurrentProduct()">Delete</button>
+            </div>
+          </form>
+          <div class="admin-list" id="adminList"></div>
         </div>
-        <div class="form-group">
-          <label>ధర / Price (ఉదా: ₹1,500 లేదా Contact for Price)</label>
-          <input type="text" id="pPrice" placeholder="₹1,500 లేదా Contact for Price">
+
+        <!-- BLOG TAB -->
+        <div class="admin-section" id="tabBlog">
+          <form class="admin-form" id="blogForm" onsubmit="return saveBlog(event)">
+            <input type="hidden" id="editBlogId">
+            <div class="form-group">
+              <label>Blog Title / శీర్షిక</label>
+              <input type="text" id="bTitle" required placeholder="పోస్ట్ శీర్షిక">
+            </div>
+            <div class="form-group">
+              <label>Short Summary / సంక్షిప్త వివరణ (కార్డ్‌పై కనిపిస్తుంది)</label>
+              <textarea id="bShort" rows="2" placeholder="1-2 lines summary"></textarea>
+            </div>
+            <div class="form-group">
+              <label>Full Content / పూర్తి కంటెంట్ (HTML సపోర్ట్ చేస్తుంది, ఉదా: &lt;p&gt;...&lt;/p&gt;)</label>
+              <textarea id="bBody" rows="6" placeholder="&lt;p&gt;మీ పూర్తి పోస్ట్ ఇక్కడ రాయండి...&lt;/p&gt;"></textarea>
+            </div>
+            <div class="form-group">
+              <label>Cover Image URL</label>
+              <input type="url" id="bImage" placeholder="https://example.com/photo.jpg">
+            </div>
+            <div class="form-group">
+              <label>📷 గ్యాలరీ నుండి కవర్ ఫోటో</label>
+              <input type="file" id="bFile" accept="image/*">
+              <img id="bPreview" alt="" style="display:none;max-width:140px;margin-top:8px;border-radius:8px">
+            </div>
+            <div class="admin-actions">
+              <button type="submit" class="btn-admin btn-save">Save Blog Post</button>
+              <button type="button" class="btn-admin btn-cancel" onclick="resetBlogForm()">New / Clear</button>
+              <button type="button" class="btn-admin btn-delete" id="deleteBlogBtn" style="display:none;" onclick="deleteCurrentBlog()">Delete</button>
+            </div>
+          </form>
+          <div class="admin-list" id="blogAdminList"></div>
         </div>
-        <div class="form-group">
-          <label>ఇమేజ్ URL / Image URL (ఫోటో లింక్ పేస్ట్ చేయండి)</label>
-          <input type="url" id="pImage" placeholder="https://example.com/photo.jpg">
-          <small style="display:block;margin-top:4px;color:#666;font-size:0.8rem;">ఇమేజ్ లింక్ పేస్ట్ చేస్తే ప్రొడక్ట్ ఫోటో మారుతుంది. కొత్త ప్రొడక్ట్‌కు కూడా ఇమేజ్ + ధర జోడించవచ్చు.</small>
-        </div>
-        <div class="form-group">
-          <label>📷 గ్యాలరీ / కెమెరా నుండి ఫోటో (Upload from gallery)</label>
-          <input type="file" id="pFile" accept="image/*">
-          <img id="pPreview" alt="" style="display:none;max-width:140px;margin-top:8px;border-radius:8px">
-        </div>
-        <div class="form-group">
-          <label>Category</label>
-          <select id="pCategory">
-            <option>Drip Irrigation</option>
-            <option>Sprinklers</option>
-            <option>Rain Guns</option>
-            <option>Farm Tools &amp; Machinery</option>
-            <option>PVC &amp; Fittings</option>
-            <option>Filters</option>
-            <option>Mulching</option>
-            <option>Weed Mat</option>
-            <option>Lapeta / Rain Pipe</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label><input type="checkbox" id="pFeatured"> Mark as Featured</label>
-        </div>
-        <div class="admin-actions">
-          <button type="submit" class="btn-admin btn-save">Save Product</button>
+
+        <div class="admin-actions" style="margin-top:20px;border-top:1px solid var(--border);padding-top:16px;">
           <button type="button" class="btn-admin btn-cancel" onclick="closeAdmin()">Close</button>
-          <button type="button" class="btn-admin btn-delete" id="deleteBtn" style="display:none;" onclick="deleteCurrentProduct()">Delete</button>
           <button type="button" class="btn-admin btn-cancel" id="logoutBtn">Logout</button>
         </div>
-      </form>
-      <div class="admin-list" id="adminList"></div>
+      </div>
     </div>
   </div>
 
@@ -1128,26 +1284,30 @@
       { name: "Repair & Maintenance", img: "https://agritools-bazaar.lovable.app/assets/farm-tools-DPTcJ5MH.jpg" }
     ];
 
+    // NOTE: ids below are real UUIDs (not "p1","p2"...) because the Supabase
+    // "products.id" column is type uuid. Using plain text ids like "p1" caused:
+    // "invalid input syntax for type uuid: \"p1\"" when saving.
     const DEFAULT_PRODUCTS = [
-      { id: "p1", name: "16mm Flat Inline Drip Pipe", desc: "4 LPH • 1000 Meter", price: "₹1,500", image: "https://agritools-bazaar.lovable.app/assets/flat-drip-BIT5Ge41.jpg", category: "Drip Irrigation", featured: true },
-      { id: "p2", name: "Flat Inline Drip Pipe", desc: "Spacing options: 40 cm / 50 cm / 60 cm", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/inline-drip-B329a_u-.jpg", category: "Drip Irrigation", featured: true },
-      { id: "p3", name: "Drip Fittings", desc: "Connectors, taps & accessories for drip systems", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/fittings-DuOuiIQg.jpg", category: "Drip Irrigation", featured: true },
-      { id: "p4", name: "PVC Pipes & Fittings", desc: "Agricultural PVC pipes and compression fittings", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/fittings-DuOuiIQg.jpg", category: "PVC & Fittings", featured: true },
-      { id: "p5", name: "Disc / Screen Filters", desc: "Filters for drip and sprinkler systems", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/fittings-DuOuiIQg.jpg", category: "Filters", featured: true },
-      { id: "p6", name: "Sprinklers", desc: "Sprinkler sets for field irrigation", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/sprinkler-CbqB-5Gk.jpg", category: "Sprinklers", featured: true },
-      { id: "p7", name: "Rain Guns", desc: "Long-range rain guns for larger areas", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/sprinkler-CbqB-5Gk.jpg", category: "Rain Guns", featured: true },
-      { id: "p8", name: "Lapeta / Rain Pipe", desc: "Rain pipe for flexible irrigation use", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/lapeta-kQ5ZXd5A.jpg", category: "Lapeta / Rain Pipe", featured: true },
-      { id: "p9", name: "Farm Tools", desc: "Essential farm tools and implements", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/farm-tools-DPTcJ5MH.jpg", category: "Farm Tools & Machinery", featured: true },
-      { id: "p10", name: "Mulching Sheet", desc: "Agricultural mulching sheets", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/mulching-CgoRW8CG.jpg", category: "Mulching", featured: true },
-      { id: "p11", name: "Weed Mat", desc: "Weed control mat for farms and plantations", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/mulching-CgoRW8CG.jpg", category: "Weed Mat", featured: true }
+      { id: "a1111111-1111-4111-8111-111111111101", name: "16mm Flat Inline Drip Pipe", desc: "4 LPH • 1000 Meter", price: "₹1,500", image: "https://agritools-bazaar.lovable.app/assets/flat-drip-BIT5Ge41.jpg", category: "Drip Irrigation", featured: true },
+      { id: "a1111111-1111-4111-8111-111111111102", name: "Flat Inline Drip Pipe", desc: "Spacing options: 40 cm / 50 cm / 60 cm", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/inline-drip-B329a_u-.jpg", category: "Drip Irrigation", featured: true },
+      { id: "a1111111-1111-4111-8111-111111111103", name: "Drip Fittings", desc: "Connectors, taps & accessories for drip systems", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/fittings-DuOuiIQg.jpg", category: "Drip Irrigation", featured: true },
+      { id: "a1111111-1111-4111-8111-111111111104", name: "PVC Pipes & Fittings", desc: "Agricultural PVC pipes and compression fittings", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/fittings-DuOuiIQg.jpg", category: "PVC & Fittings", featured: true },
+      { id: "a1111111-1111-4111-8111-111111111105", name: "Disc / Screen Filters", desc: "Filters for drip and sprinkler systems", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/fittings-DuOuiIQg.jpg", category: "Filters", featured: true },
+      { id: "a1111111-1111-4111-8111-111111111106", name: "Sprinklers", desc: "Sprinkler sets for field irrigation", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/sprinkler-CbqB-5Gk.jpg", category: "Sprinklers", featured: true },
+      { id: "a1111111-1111-4111-8111-111111111107", name: "Rain Guns", desc: "Long-range rain guns for larger areas", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/sprinkler-CbqB-5Gk.jpg", category: "Rain Guns", featured: true },
+      { id: "a1111111-1111-4111-8111-111111111108", name: "Lapeta / Rain Pipe", desc: "Rain pipe for flexible irrigation use", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/lapeta-kQ5ZXd5A.jpg", category: "Lapeta / Rain Pipe", featured: true },
+      { id: "a1111111-1111-4111-8111-111111111109", name: "Farm Tools", desc: "Essential farm tools and implements", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/farm-tools-DPTcJ5MH.jpg", category: "Farm Tools & Machinery", featured: true },
+      { id: "a1111111-1111-4111-8111-111111111110", name: "Mulching Sheet", desc: "Agricultural mulching sheets", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/mulching-CgoRW8CG.jpg", category: "Mulching", featured: true },
+      { id: "a1111111-1111-4111-8111-111111111111", name: "Weed Mat", desc: "Weed control mat for farms and plantations", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/mulching-CgoRW8CG.jpg", category: "Weed Mat", featured: true }
     ];
 
-    const BLOGS = [
-      { id: "b1", title: "ఒక ఎకరం డ్రిప్ కిట్ ₹9,999 – రైతులు తెలుసుకోవాల్సిన విషయాలు", short: "₹9,999 డ్రిప్ కిట్ ఆఫర్ గురించి ముఖ్యమైన వివరాలు మరియు జాగ్రత్తలు.", img: "https://agritools-bazaar.lovable.app/assets/flat-drip-BIT5Ge41.jpg", body: "<p class='telugu'>ఒక ఎకరం డ్రిప్ కిట్ ₹9,999 ఆఫర్ రైతులకు ఆకర్షణీయంగా ఉంది. ఈ ఆఫర్‌లో సాధారణంగా డ్రిప్ పైప్, ఫిట్టింగ్స్ మరియు ప్రాథమిక భాగాలు ఉంటాయి. పూర్తి ప్యాకేజ్ వివరాలు, పొలం పరిమాణం మరియు పంటకు అనుగుణంగా అదనపు భాగాలు అవసరమవుతాయో మా టీమ్‌ను అడగండి.</p><p>Contact us on WhatsApp for exact package contents, delivery and installation support. Stock is limited.</p>" },
-      { id: "b2", title: "Drip Irrigation ఎలా ఎంచుకోవాలి?", short: "పంట, నేల, నీటి వనరు ఆధారంగా సరైన డ్రిప్ సిస్టమ్ ఎంపిక.", img: "https://agritools-bazaar.lovable.app/assets/inline-drip-B329a_u-.jpg", body: "<p class='telugu'>డ్రిప్ ఇరిగేషన్ ఎంచుకునేటప్పుడు పంట రకం (కూరగాయలు, మిర్చి, పత్తి మొదలైనవి), నేల రకం, నీటి వనరు ఒత్తిడి మరియు పొలం సైజు చూడాలి. Inline vs Flat drip, డ్రిప్పర్ స్పేసింగ్, ఫిల్టర్ రకం ముఖ్యం.</p><p>Our team can help you choose the right layout after understanding your field and crop.</p>" },
-      { id: "b3", title: "డ్రిప్ పైప్ కొనేటప్పుడు రైతులు చేసే 5 తప్పులు", short: "నాణ్యత, స్పేసింగ్, ఫిల్టర్ వంటి సాధారణ తప్పులు మరియు నివారణ.", img: "https://agritools-bazaar.lovable.app/assets/flat-drip-BIT5Ge41.jpg", body: "<p class='telugu'>1. నాణ్యత లేని పైప్ కొనడం 2. తప్పు స్పేసింగ్ 3. ఫిల్టర్ లేకుండా వాడటం 4. లేఅవుట్ లేకుండా అమర్చడం 5. నిర్వహణ మరచిపోవడం. ఈ తప్పులు నీటి వృథా మరియు అధిక ఖర్చుకు దారితీస్తాయి.</p><p>Ask us before buying so we can guide on quality and correct setup.</p>" },
-      { id: "b4", title: "Sprinkler Irrigation రైతులకు ఎప్పుడు ఉపయోగకరం?", short: "స్ప్రింక్లర్ / రైన్ గన్ ఎప్పుడు సరిపోతుందో తెలుసుకోండి.", img: "https://agritools-bazaar.lovable.app/assets/sprinkler-CbqB-5Gk.jpg", body: "<p class='telugu'>స్ప్రింక్లర్ ఇరిగేషన్ కొన్ని పంటలకు, సాపేక్షంగా సమాన భూమికి మరియు నీటి ఒత్తిడి ఉన్నప్పుడు ఉపయోగకరం. రైన్ గన్స్ పెద్ద ప్రాంతాలకు సరిపోతాయి. డ్రిప్ తో పోలిస్తే నీటి వినియోగం ఎక్కువ కావచ్చు – పంట మరియు నీటి లభ్యత చూసి నిర్ణయించండి.</p>" },
-      { id: "b5", title: "Drip Irrigation Subsidy గురించి రైతులు తెలుసుకోవాల్సిన విషయాలు", short: "సబ్సిడీ పథకాలు, దరఖాస్తు మరియు గమనించాల్సిన విషయాలు.", img: "https://agritools-bazaar.lovable.app/assets/hero-farmer-3oGNTqbU.jpg", body: "<p class='telugu'>తెలంగాణ మరియు ఆంధ్రప్రదేశ్‌లో మైక్రో ఇరిగేషన్ సబ్సిడీ పథకాలు అందుబాటులో ఉంటాయి. అర్హత, శాతం మరియు పత్రాలు ప్రభుత్వ నిబంధనలపై ఆధారపడి ఉంటాయి. మేము స్కీమ్ గైడెన్స్, డాక్యుమెంట్ జాబితా మరియు సిస్టమ్ ఎంపికలో సహాయం చేస్తాము. ఏ శాతం సబ్సిడీ వస్తుందో హామీ ఇవ్వము – అధికారిక మార్గదర్శకాలను అనుసరించండి.</p>" }
+    // Same fix applied to blog ids: real UUIDs instead of "b1","b2"...
+    const DEFAULT_BLOGS = [
+      { id: "b2222222-2222-4222-8222-222222222201", title: "ఒక ఎకరం డ్రిప్ కిట్ ₹9,999 – రైతులు తెలుసుకోవాల్సిన విషయాలు", short: "₹9,999 డ్రిప్ కిట్ ఆఫర్ గురించి ముఖ్యమైన వివరాలు మరియు జాగ్రత్తలు.", img: "https://agritools-bazaar.lovable.app/assets/flat-drip-BIT5Ge41.jpg", body: "<p class='telugu'>ఒక ఎకరం డ్రిప్ కిట్ ₹9,999 ఆఫర్ రైతులకు ఆకర్షణీయంగా ఉంది. ఈ ఆఫర్‌లో సాధారణంగా డ్రిప్ పైప్, ఫిట్టింగ్స్ మరియు ప్రాథమిక భాగాలు ఉంటాయి. పూర్తి ప్యాకేజ్ వివరాలు, పొలం పరిమాణం మరియు పంటకు అనుగుణంగా అదనపు భాగాలు అవసరమవుతాయో మా టీమ్‌ను అడగండి.</p><p>Contact us on WhatsApp for exact package contents, delivery and installation support. Stock is limited.</p>" },
+      { id: "b2222222-2222-4222-8222-222222222202", title: "Drip Irrigation ఎలా ఎంచుకోవాలి?", short: "పంట, నేల, నీటి వనరు ఆధారంగా సరైన డ్రిప్ సిస్టమ్ ఎంపిక.", img: "https://agritools-bazaar.lovable.app/assets/inline-drip-B329a_u-.jpg", body: "<p class='telugu'>డ్రిప్ ఇరిగేషన్ ఎంచుకునేటప్పుడు పంట రకం (కూరగాయలు, మిర్చి, పత్తి మొదలైనవి), నేల రకం, నీటి వనరు ఒత్తిడి మరియు పొలం సైజు చూడాలి. Inline vs Flat drip, డ్రిప్పర్ స్పేసింగ్, ఫిల్టర్ రకం ముఖ్యం.</p><p>Our team can help you choose the right layout after understanding your field and crop.</p>" },
+      { id: "b2222222-2222-4222-8222-222222222203", title: "డ్రిప్ పైప్ కొనేటప్పుడు రైతులు చేసే 5 తప్పులు", short: "నాణ్యత, స్పేసింగ్, ఫిల్టర్ వంటి సాధారణ తప్పులు మరియు నివారణ.", img: "https://agritools-bazaar.lovable.app/assets/flat-drip-BIT5Ge41.jpg", body: "<p class='telugu'>1. నాణ్యత లేని పైప్ కొనడం 2. తప్పు స్పేసింగ్ 3. ఫిల్టర్ లేకుండా వాడటం 4. లేఅవుట్ లేకుండా అమర్చడం 5. నిర్వహణ మరచిపోవడం. ఈ తప్పులు నీటి వృథా మరియు అధిక ఖర్చుకు దారితీస్తాయి.</p><p>Ask us before buying so we can guide on quality and correct setup.</p>" },
+      { id: "b2222222-2222-4222-8222-222222222204", title: "Sprinkler Irrigation రైతులకు ఎప్పుడు ఉపయోగకరం?", short: "స్ప్రింక్లర్ / రైన్ గన్ ఎప్పుడు సరిపోతుందో తెలుసుకోండి.", img: "https://agritools-bazaar.lovable.app/assets/sprinkler-CbqB-5Gk.jpg", body: "<p class='telugu'>స్ప్రింక్లర్ ఇరిగేషన్ కొన్ని పంటలకు, సాపేక్షంగా సమాన భూమికి మరియు నీటి ఒత్తిడి ఉన్నప్పుడు ఉపయోగకరం. రైన్ గన్స్ పెద్ద ప్రాంతాలకు సరిపోతాయి. డ్రిప్ తో పోలిస్తే నీటి వినియోగం ఎక్కువ కావచ్చు – పంట మరియు నీటి లభ్యత చూసి నిర్ణయించండి.</p>" },
+      { id: "b2222222-2222-4222-8222-222222222205", title: "Drip Irrigation Subsidy గురించి రైతులు తెలుసుకోవాల్సిన విషయాలు", short: "సబ్సిడీ పథకాలు, దరఖాస్తు మరియు గమనించాల్సిన విషయాలు.", img: "https://agritools-bazaar.lovable.app/assets/hero-farmer-3oGNTqbU.jpg", body: "<p class='telugu'>తెలంగాణ మరియు ఆంధ్రప్రదేశ్‌లో మైక్రో ఇరిగేషన్ సబ్సిడీ పథకాలు అందుబాటులో ఉంటాయి. అర్హత, శాతం మరియు పత్రాలు ప్రభుత్వ నిబంధనలపై ఆధారపడి ఉంటాయి. మేము స్కీమ్ గైడెన్స్, డాక్యుమెంట్ జాబితా మరియు సిస్టమ్ ఎంపికలో సహాయం చేస్తాము. ఏ శాతం సబ్సిడీ వస్తుందో హామీ ఇవ్వము – అధికారిక మార్గదర్శకాలను అనుసరించండి.</p>" }
     ];
 
     const WA_BASE = "https://wa.me/919849735864?text=";
@@ -1158,9 +1318,11 @@
     const BUCKET = "product-images";
     const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-    let CACHE = null;   // null => table empty, show default products
+    let CACHE = null;      // products; null => table empty, show default products
+    let BLOG_CACHE = null; // blog posts; null => table empty/missing, show default blogs
     let session = null;
     let editingId = null;
+    let editingBlogId = null;
 
     const fromRow = r => ({
       id: r.id, name: r.name, desc: r.description || "",
@@ -1172,8 +1334,19 @@
       image_url: p.image || null, category: p.category, featured: p.featured
     });
 
+    const blogFromRow = r => ({
+      id: r.id, title: r.title, short: r.short_desc || "",
+      img: r.image_url || "", body: r.body || ""
+    });
+    const blogToRow = b => ({
+      id: b.id, title: b.title, short_desc: b.short, image_url: b.img || null, body: b.body
+    });
+
     function getProducts() {
       return CACHE ? CACHE.slice() : JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
+    }
+    function getBlogs() {
+      return BLOG_CACHE ? BLOG_CACHE.slice() : JSON.parse(JSON.stringify(DEFAULT_BLOGS));
     }
 
     async function loadProductsFromServer() {
@@ -1183,12 +1356,25 @@
       if (document.getElementById("adminPanel").classList.contains("open") && session) renderAdminList();
     }
 
-    // First save on an empty table: seed default products too, so nothing disappears
+    async function loadBlogsFromServer() {
+      const { data, error } = await sb.from("blog_posts").select("*").order("created_at", { ascending: true });
+      BLOG_CACHE = (!error && data && data.length) ? data.map(blogFromRow) : null;
+      renderBlogs();
+      if (document.getElementById("adminPanel").classList.contains("open") && session) renderBlogAdminList();
+    }
+
+    // First save on an empty table: seed default products/blogs too, so nothing disappears
     async function seedIfEmpty() {
       if (CACHE !== null) return;
       const { error } = await sb.from("products").upsert(DEFAULT_PRODUCTS.map(toRow));
       if (error) throw error;
       CACHE = DEFAULT_PRODUCTS.map(p => ({ ...p }));
+    }
+    async function seedBlogsIfEmpty() {
+      if (BLOG_CACHE !== null) return;
+      const { error } = await sb.from("blog_posts").upsert(DEFAULT_BLOGS.map(blogToRow));
+      if (error) throw error;
+      BLOG_CACHE = DEFAULT_BLOGS.map(b => ({ ...b }));
     }
 
     // ---- Photo: resize (phone photos are huge) + upload ----
@@ -1206,7 +1392,7 @@
         img.src = url;
       });
     }
-    async function uploadProductImage(file) {
+    async function uploadImage(file) {
       const blob = await compressImage(file);
       const path = Date.now() + "-" + Math.random().toString(36).slice(2, 8) + ".jpg";
       const { error } = await sb.storage.from(BUCKET).upload(path, blob, { contentType: "image/jpeg" });
@@ -1248,10 +1434,11 @@
     }
 
     function renderBlogs() {
+      const blogs = getBlogs();
       const grid = document.getElementById("blogGrid");
-      grid.innerHTML = BLOGS.map(b => `
+      grid.innerHTML = blogs.map(b => `
         <article class="blog-card">
-          <img src="${b.img}" alt="" loading="lazy" width="400" height="150">
+          <img src="${b.img || 'https://agritools-bazaar.lovable.app/assets/hero-farmer-3oGNTqbU.jpg'}" alt="" loading="lazy" width="400" height="150">
           <div class="blog-body">
             <h3 class="telugu">${b.title}</h3>
             <p class="telugu">${b.short}</p>
@@ -1262,7 +1449,7 @@
     }
 
     function openBlog(id) {
-      const b = BLOGS.find(x => x.id === id);
+      const b = getBlogs().find(x => x.id === id);
       if (!b) return;
       document.getElementById("blogModalTitle").textContent = b.title;
       document.getElementById("blogModalBody").innerHTML = b.body;
@@ -1273,6 +1460,15 @@
     function closeBlog() {
       document.getElementById("blogModal").classList.remove("open");
       document.body.style.overflow = "";
+    }
+
+    // ========== WELCOME OFFER POPUP ==========
+    function showOfferPopup() {
+      document.getElementById("offerPopup").classList.add("open");
+    }
+    function closeOfferPopup() {
+      document.getElementById("offerPopup").classList.remove("open");
+      try { sessionStorage.setItem("offerPopupShown", "1"); } catch (e) {}
     }
 
     // ========== CONTACT FORM → WhatsApp ==========
@@ -1293,10 +1489,9 @@
       return false;
     }
 
-    // ========== ADMIN ==========
-    function preview(url) {
-      const p = document.getElementById("pPreview");
-      p.src = url || ""; p.style.display = url ? "block" : "none";
+    // ========== ADMIN: shared ==========
+    function preview(inputEl, imgEl, url) {
+      imgEl.src = url || ""; imgEl.style.display = url ? "block" : "none";
     }
 
     async function openAdmin() {
@@ -1311,16 +1506,27 @@
       document.getElementById("adminPanel").classList.remove("open");
       document.body.style.overflow = "";
       resetAdminForm();
+      resetBlogForm();
     }
 
     function refreshAdminView() {
       const on = !!session;
       document.getElementById("loginBox").style.display = on ? "none" : "block";
-      document.getElementById("adminForm").style.display = on ? "" : "none";
-      document.getElementById("adminList").style.display = on ? "" : "none";
-      if (on) { renderAdminList(); resetAdminForm(); }
+      document.getElementById("adminLoggedIn").style.display = on ? "block" : "none";
+      if (on) {
+        renderAdminList(); resetAdminForm();
+        renderBlogAdminList(); resetBlogForm();
+      }
     }
 
+    function switchAdminTab(tab) {
+      document.getElementById("tabProducts").classList.toggle("active", tab === "products");
+      document.getElementById("tabBlog").classList.toggle("active", tab === "blog");
+      document.getElementById("tabProductsBtn").classList.toggle("active", tab === "products");
+      document.getElementById("tabBlogBtn").classList.toggle("active", tab === "blog");
+    }
+
+    // ========== ADMIN: PRODUCTS ==========
     function resetAdminForm() {
       editingId = null;
       document.getElementById("editId").value = "";
@@ -1329,7 +1535,7 @@
       document.getElementById("pPrice").value = "";
       document.getElementById("pImage").value = "";
       document.getElementById("pFile").value = "";
-      preview("");
+      preview(null, document.getElementById("pPreview"), "");
       document.getElementById("pCategory").selectedIndex = 0;
       document.getElementById("pFeatured").checked = true;
       document.getElementById("deleteBtn").style.display = "none";
@@ -1357,7 +1563,7 @@
       document.getElementById("pPrice").value = p.price || "";
       document.getElementById("pImage").value = p.image || "";
       document.getElementById("pFile").value = "";
-      preview(p.image || "");
+      preview(null, document.getElementById("pPreview"), p.image || "");
       document.getElementById("pCategory").value = p.category || "Other";
       document.getElementById("pFeatured").checked = p.featured !== false;
       document.getElementById("deleteBtn").style.display = "inline-block";
@@ -1373,7 +1579,7 @@
         await seedIfEmpty();
         let image = document.getElementById("pImage").value.trim();
         const file = document.getElementById("pFile").files[0];
-        if (file) image = await uploadProductImage(file);
+        if (file) image = await uploadImage(file);
         const row = {
           name: document.getElementById("pName").value.trim(),
           description: document.getElementById("pDesc").value.trim(),
@@ -1408,9 +1614,94 @@
       } catch (err) { alert("Error: " + (err.message || err)); }
     }
 
+    // ========== ADMIN: BLOG POSTS ==========
+    function resetBlogForm() {
+      editingBlogId = null;
+      document.getElementById("editBlogId").value = "";
+      document.getElementById("bTitle").value = "";
+      document.getElementById("bShort").value = "";
+      document.getElementById("bBody").value = "";
+      document.getElementById("bImage").value = "";
+      document.getElementById("bFile").value = "";
+      preview(null, document.getElementById("bPreview"), "");
+      document.getElementById("deleteBlogBtn").style.display = "none";
+    }
+
+    function renderBlogAdminList() {
+      const list = getBlogs();
+      const el = document.getElementById("blogAdminList");
+      el.innerHTML = "<h3 style='margin-bottom:10px;'>Current Blog Posts</h3>" + list.map(b => `
+        <div class="admin-list-item">
+          <span><strong>${b.title}</strong></span>
+          <button type="button" class="btn-admin btn-save" style="padding:6px 12px;font-size:0.8rem;" onclick="editBlog('${b.id}')">Edit</button>
+        </div>
+      `).join("");
+    }
+
+    function editBlog(id) {
+      const b = getBlogs().find(x => x.id === id);
+      if (!b) return;
+      editingBlogId = id;
+      document.getElementById("editBlogId").value = id;
+      document.getElementById("bTitle").value = b.title || "";
+      document.getElementById("bShort").value = b.short || "";
+      document.getElementById("bBody").value = b.body || "";
+      document.getElementById("bImage").value = b.img || "";
+      document.getElementById("bFile").value = "";
+      preview(null, document.getElementById("bPreview"), b.img || "");
+      document.getElementById("deleteBlogBtn").style.display = "inline-block";
+      document.getElementById("blogForm").scrollIntoView({ behavior: "smooth" });
+    }
+
+    async function saveBlog(e) {
+      e.preventDefault();
+      if (!session) { alert("ముందు Login చేయండి"); return false; }
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.disabled = true; btn.textContent = "Saving...";
+      try {
+        await seedBlogsIfEmpty();
+        let image = document.getElementById("bImage").value.trim();
+        const file = document.getElementById("bFile").files[0];
+        if (file) image = await uploadImage(file);
+        const row = {
+          title: document.getElementById("bTitle").value.trim(),
+          short_desc: document.getElementById("bShort").value.trim(),
+          body: document.getElementById("bBody").value.trim(),
+          image_url: image || null
+        };
+        if (editingBlogId) row.id = editingBlogId;
+        const { error } = await sb.from("blog_posts").upsert(row);
+        if (error) throw error;
+        await loadBlogsFromServer();
+        renderBlogAdminList(); resetBlogForm();
+        alert("Saved ✅ / సేవ్ అయింది");
+      } catch (err) {
+        alert("Error: " + (err.message || err) + (String(err.message||"").includes("blog_posts") ? "\n\n(Supabase లో 'blog_posts' టేబుల్ లేకపోతే, దాన్ని ముందు క్రియేట్ చేయాలి — columns: id uuid, title text, short_desc text, body text, image_url text, created_at timestamp)" : ""));
+      } finally {
+        btn.disabled = false; btn.textContent = "Save Blog Post";
+      }
+      return false;
+    }
+
+    async function deleteCurrentBlog() {
+      if (!editingBlogId || !session) return;
+      if (!confirm("Delete this blog post?")) return;
+      try {
+        await seedBlogsIfEmpty();
+        const { error } = await sb.from("blog_posts").delete().eq("id", editingBlogId);
+        if (error) throw error;
+        await loadBlogsFromServer();
+        renderBlogAdminList(); resetBlogForm();
+      } catch (err) { alert("Error: " + (err.message || err)); }
+    }
+
     document.getElementById("pFile").addEventListener("change", e => {
       const f = e.target.files[0];
-      if (f) preview(URL.createObjectURL(f));
+      if (f) preview(null, document.getElementById("pPreview"), URL.createObjectURL(f));
+    });
+    document.getElementById("bFile").addEventListener("change", e => {
+      const f = e.target.files[0];
+      if (f) preview(null, document.getElementById("bPreview"), URL.createObjectURL(f));
     });
 
     document.getElementById("loginBtn").addEventListener("click", async () => {
@@ -1450,6 +1741,30 @@
       });
     });
 
+    // ========== BOTTOM APP NAV: active state on scroll + click ==========
+    (function() {
+      const bnLinks = Array.from(document.querySelectorAll(".bn-link"));
+      bnLinks.forEach(a => {
+        a.addEventListener("click", () => {
+          bnLinks.forEach(x => x.classList.remove("active"));
+          a.classList.add("active");
+        });
+      });
+      const sectionIds = ["home", "products", "blog", "contact"];
+      const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+      if ("IntersectionObserver" in window && sections.length) {
+        const obs = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const id = entry.target.id;
+              bnLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + id));
+            }
+          });
+        }, { rootMargin: "-40% 0px -50% 0px" });
+        sections.forEach(s => obs.observe(s));
+      }
+    })();
+
     // Logo 3 clicks → open admin (login form shown, password check via Supabase auth)
     (function() {
       let logoClicks = 0;
@@ -1476,12 +1791,23 @@
     document.getElementById("adminPanel").addEventListener("click", function(e) {
       if (e.target === this) closeAdmin();
     });
+    document.getElementById("offerPopup").addEventListener("click", function(e) {
+      if (e.target === this) closeOfferPopup();
+    });
 
     // ========== INIT ==========
     renderCategories();
     renderProducts();
     renderBlogs();
     loadProductsFromServer();
+    loadBlogsFromServer();
+
+    // Show the 1-Acre Drip Kit offer popup on first load of this browser session
+    (function() {
+      let already = false;
+      try { already = sessionStorage.getItem("offerPopupShown") === "1"; } catch (e) {}
+      if (!already) setTimeout(showOfferPopup, 900);
+    })();
   </script>
 </body>
 </html>
