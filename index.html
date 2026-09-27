@@ -1,1813 +1,448 @@
 <!DOCTYPE html>
 <html lang="te">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>AgriToolsIndia | Drip Irrigation, Sprinklers & Farm Equipment</title>
-  <meta name="description" content="AgriToolsIndia – డ్రిప్ ఇరిగేషన్, స్ప్రింక్లర్లు, రైన్ గన్స్, PVC ఫిట్టింగ్స్, ఫార్మ్ టూల్స్, మల్చింగ్, వీడ్ మ్యాట్ మరియు వ్యవసాయ పరికరాలు. తెలంగాణ & ఆంధ్రప్రదేశ్ రైతులకు సరఫరా మరియు ఇన్‌స్టాలేషన్ సేవలు.">
-  <meta name="keywords" content="drip irrigation, sprinklers, rain guns, farm tools, PVC fittings, mulching, weed mat, Telangana, Andhra Pradesh, AgriToolsIndia, డ్రిప్ ఇరిగేషన్, స్ప్రింక్లర్">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://agritoolsindia.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="AgriToolsIndia | Drip Irrigation, Sprinklers & Farm Equipment">
-  <meta property="og:description" content="AgriToolsIndia – డ్రిప్ ఇరిగేషన్, స్ప్రింక్లర్లు, రైన్ గన్స్, PVC ఫిట్టింగ్స్, ఫార్మ్ టూల్స్, మల్చింగ్, వీడ్ మ్యాట్. తెలంగాణ & ఆంధ్రప్రదేశ్ రైతులకు.">
-  <meta property="og:locale" content="te_IN">
-  <meta property="og:url" content="https://agritoolsindia.github.io/">
-  <meta name="theme-color" content="#1b5e20">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "AgriToolsIndia",
-    "description": "Drip irrigation, sprinklers, rain guns, PVC fittings, farm tools, mulching and weed mat for farmers in Telangana and Andhra Pradesh.",
-    "telephone": "+919849735864",
-    "url": "https://agritoolsindia.github.io/",
-    "areaServed": ["Telangana", "Andhra Pradesh"],
-    "priceRange": "₹₹",
-    "address": {
-      "@type": "PostalAddress",
-      "addressRegion": "Telangana",
-      "addressCountry": "IN"
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgriToolsIndia - వ్యవసాయ పరికరాలు</title>
+<style>
+  :root{
+    --green-dark:#1f4d2c;
+    --green:#2e7d32;
+    --green-light:#e8f5e9;
+    --gold:#f2a900;
+    --text:#26312a;
+    --danger:#c0392b;
   }
-  </script>
-  <style>
-    :root {
-      --green-900: #1b5e20;
-      --green-800: #2e7d32;
-      --green-700: #388e3c;
-      --green-600: #43a047;
-      --green-100: #e8f5e9;
-      --green-50: #f1f8e9;
-      --earth: #5d4037;
-      --sand: #f5f5f0;
-      --orange: #e65100;
-      --orange-light: #fff3e0;
-      --whatsapp: #25d366;
-      --text: #1a1a1a;
-      --muted: #555;
-      --border: #e0e0e0;
-      --shadow: 0 4px 20px rgba(0,0,0,0.08);
-      --radius: 14px;
-      --header-h: 64px;
-      --bottomnav-h: 60px;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', 'Noto Sans Telugu', system-ui, sans-serif;
-      color: var(--text);
-      background: #fff;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    img { max-width: 100%; height: auto; display: block; }
-    a { text-decoration: none; color: inherit; }
-    button, .btn { cursor: pointer; border: none; font-family: inherit; }
-    .container { width: min(1120px, 92%); margin: 0 auto; }
-    .telugu { font-family: 'Noto Sans Telugu', sans-serif; }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    color:var(--text);
+    background:#fafaf7;
+    line-height:1.7;
+  }
+  a{color:inherit;}
+  header{
+    background:linear-gradient(135deg,var(--green-dark),var(--green));
+    color:#fff;
+    padding:14px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:50;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+  }
+  .brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:1.15rem;}
+  .brand span.logo{font-size:1.4rem;}
+  .header-icons{display:flex;align-items:center;gap:14px;}
+  .icon-btn{
+    width:36px;height:36px;border-radius:50%;
+    background:rgba(255,255,255,.18);
+    display:flex;align-items:center;justify-content:center;
+    text-decoration:none;color:#fff;font-size:1.1rem;
+  }
+  .menu-toggle{
+    background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;
+  }
+  nav{
+    display:none;
+    flex-direction:column;
+    background:var(--green-dark);
+    position:sticky;
+    top:64px;
+    z-index:49;
+  }
+  nav.open{display:flex;}
+  nav a{
+    color:#fff;padding:14px 20px;text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,.1);
+    font-size:.95rem;
+  }
+  nav a:active{background:rgba(255,255,255,.1);}
 
-    /* Header */
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #fff;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      height: var(--header-h);
-    }
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 100%;
-      gap: 12px;
-    }
-    .logo {
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: var(--green-900);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      white-space: nowrap;
-    }
-    .logo-icon {
-      width: 36px; height: 36px;
-      background: linear-gradient(135deg, var(--green-700), var(--green-900));
-      border-radius: 10px;
-      display: grid; place-items: center;
-      color: #fff; font-size: 1.1rem;
-    }
-    .nav-desktop { display: none; gap: 4px; flex-wrap: wrap; align-items: center; }
-    .nav-desktop a {
-      padding: 6px 10px;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--muted);
-      border-radius: 8px;
-      transition: 0.2s;
-    }
-    .nav-desktop a:hover { color: var(--green-800); background: var(--green-50); }
-    .header-actions { display: flex; gap: 8px; align-items: center; }
-    .btn-call, .btn-wa {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 8px 12px; border-radius: 999px;
-      font-size: 0.85rem; font-weight: 600;
-      transition: 0.2s;
-    }
-    .btn-call { background: var(--green-800); color: #fff; }
-    .btn-call:hover { background: var(--green-900); }
-    .btn-wa { background: var(--whatsapp); color: #fff; }
-    .btn-wa:hover { filter: brightness(1.05); }
-    .hamburger {
-      display: flex; flex-direction: column; gap: 5px;
-      background: none; padding: 8px;
-    }
-    .hamburger span {
-      width: 22px; height: 2.5px; background: var(--green-900); border-radius: 2px;
-      transition: 0.25s;
-    }
-    .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+  main{max-width:900px;margin:0 auto;padding:20px 16px 60px;}
+  section{scroll-margin-top:70px;margin-bottom:36px;}
 
-    /* Mobile menu */
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: var(--header-h);
-      left: 0; right: 0; bottom: 0;
-      background: #fff;
-      z-index: 999;
-      overflow-y: auto;
-      padding: 16px 20px 40px;
-    }
-    .mobile-menu.open { display: block; }
-    .mobile-menu a {
-      display: block;
-      padding: 14px 12px;
-      border-bottom: 1px solid var(--border);
-      font-weight: 500;
-      color: var(--text);
-    }
-    .mobile-menu a:hover { color: var(--green-800); background: var(--green-50); }
-    .mobile-menu .menu-actions {
-      display: flex; flex-direction: column; gap: 10px; margin-top: 20px;
-    }
-    .mobile-menu .btn-call, .mobile-menu .btn-wa {
-      justify-content: center; padding: 14px;
-      font-size: 1rem;
-    }
+  .hero{
+    background:var(--green-light);
+    border-radius:14px;
+    padding:24px 20px;
+    text-align:center;
+    margin-bottom:28px;
+  }
+  .hero h1{margin:0 0 8px;color:var(--green-dark);font-size:1.4rem;}
+  .hero p{margin:0;color:#4a5a4d;}
 
-    /* Hero */
-    .hero {
-      position: relative;
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(135deg, rgba(27,94,32,0.82), rgba(46,125,50,0.7)),
-        url('https://agritools-bazaar.lovable.app/assets/hero-farmer-3oGNTqbU.jpg') center/cover no-repeat;
-      color: #fff;
-      padding: 48px 0 56px;
-    }
-    .hero-content { max-width: 640px; }
-    .hero-tag {
-      display: inline-block;
-      background: rgba(255,255,255,0.2);
-      backdrop-filter: blur(6px);
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      margin-bottom: 14px;
-    }
-    .hero h1 {
-      font-size: clamp(1.55rem, 4.5vw, 2.35rem);
-      line-height: 1.35;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-    .hero .en-sub {
-      font-size: 1.05rem;
-      opacity: 0.95;
-      margin-bottom: 18px;
-    }
-    .hero-offer {
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.35);
-      border-radius: var(--radius);
-      padding: 16px 18px;
-      margin: 20px 0;
-      backdrop-filter: blur(8px);
-    }
-    .hero-offer .price {
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: #ffeb3b;
-    }
-    .hero-offer .crops { font-size: 0.9rem; opacity: 0.9; margin-top: 4px; }
-    .hero-btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
-    .btn-primary {
-      background: #fff;
-      color: var(--green-900);
-      padding: 14px 22px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      display: inline-flex; align-items: center; gap: 8px;
-      transition: 0.2s;
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
-    .btn-outline {
-      background: transparent;
-      color: #fff;
-      border: 2px solid rgba(255,255,255,0.8);
-      padding: 12px 20px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      display: inline-flex; align-items: center; gap: 8px;
-      transition: 0.2s;
-    }
-    .btn-outline:hover { background: rgba(255,255,255,0.15); }
+  h2.section-title{
+    color:var(--green-dark);
+    border-left:4px solid var(--gold);
+    padding-left:10px;
+    font-size:1.2rem;
+  }
 
-    /* Sections */
-    section { padding: 56px 0; }
-    .section-title {
-      text-align: center;
-      margin-bottom: 36px;
-    }
-    .section-title h2 {
-      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
-      color: var(--green-900);
-      margin-bottom: 8px;
-    }
-    .section-title p { color: var(--muted); max-width: 560px; margin: 0 auto; }
+  .products-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  @media(min-width:600px){
+    .products-grid{grid-template-columns:1fr 1fr;}
+  }
+  .product-card{
+    background:#fff;
+    border:1px solid #e0e0d8;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,.04);
+  }
+  .product-card img{
+    width:100%;height:150px;object-fit:cover;background:#eee;display:block;
+  }
+  .product-body{padding:14px 16px;}
+  .product-body h3{margin:0 0 6px;font-size:1.02rem;color:var(--text);}
+  .product-price{color:var(--green-dark);font-weight:700;margin:4px 0;}
+  .badge{
+    display:inline-block;background:var(--gold);color:#3a2a00;
+    font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:20px;
+    margin-bottom:6px;
+  }
+  .product-desc{font-size:.88rem;color:#555;margin:4px 0 0;}
+  .empty-msg{color:#777;text-align:center;padding:20px;}
 
-    /* Special Offer */
-    .offer-section { background: var(--orange-light); }
-    .offer-card {
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 1fr;
-      max-width: 820px;
-      margin: 0 auto;
-      border: 2px solid #ffcc80;
-    }
-    .offer-card-img {
-      height: 200px;
-      background: url('https://agritools-bazaar.lovable.app/assets/flat-drip-BIT5Ge41.jpg') center/cover;
-    }
-    .offer-card-body { padding: 28px 24px; text-align: center; }
-    .offer-badge {
-      display: inline-block;
-      background: var(--orange);
-      color: #fff;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 4px 12px;
-      border-radius: 999px;
-      margin-bottom: 10px;
-      letter-spacing: 0.5px;
-    }
-    .offer-card h3 { font-size: 1.5rem; color: var(--green-900); margin-bottom: 6px; }
-    .offer-price {
-      font-size: 2.1rem;
-      font-weight: 800;
-      color: var(--orange);
-      margin: 8px 0;
-    }
-    .offer-note { color: var(--muted); font-size: 0.95rem; margin-bottom: 18px; }
-    .offer-btns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .card{
+    background:#fff;
+    border:1px solid #e0e0d8;
+    border-radius:12px;
+    padding:20px 22px;
+    margin-bottom:16px;
+    box-shadow:0 2px 8px rgba(0,0,0,.04);
+  }
 
-    /* Categories */
-    .categories-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 14px;
-    }
-    .cat-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      text-align: center;
-      transition: 0.25s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
-    .cat-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow);
-      border-color: var(--green-600);
-    }
-    .cat-card img {
-      width: 100%;
-      height: 110px;
-      object-fit: cover;
-    }
-    .cat-card h3 {
-      font-size: 0.88rem;
-      padding: 12px 8px 14px;
-      color: var(--green-900);
-      font-weight: 600;
-    }
+  form.stacked{display:flex;flex-direction:column;gap:10px;}
+  form.stacked label{font-size:.85rem;font-weight:600;color:var(--green-dark);}
+  form.stacked input,form.stacked textarea{
+    padding:10px 12px;border:1px solid #ccc;border-radius:8px;font-size:.95rem;
+    font-family:inherit;
+  }
+  form.stacked textarea{resize:vertical;min-height:60px;}
+  .btn{
+    background:var(--green);color:#fff;border:none;border-radius:8px;
+    padding:11px 18px;font-size:.95rem;font-weight:600;cursor:pointer;
+  }
+  .btn:hover{background:var(--green-dark);}
+  .btn-danger{background:var(--danger);}
+  .btn-outline{
+    background:none;border:1px solid var(--green);color:var(--green-dark);
+  }
+  .row-actions{display:flex;gap:8px;margin-top:8px;}
+  .status-msg{font-size:.85rem;margin-top:6px;}
+  .status-msg.ok{color:var(--green-dark);}
+  .status-msg.err{color:var(--danger);}
 
-    /* Products */
-    .products-section { background: var(--sand); }
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 20px;
-    }
-    .product-card {
-      background: #fff;
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      display: flex;
-      flex-direction: column;
-      transition: 0.25s;
-      border: 1px solid transparent;
-    }
-    .product-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow);
-      border-color: var(--green-100);
-    }
-    .product-card img {
-      width: 100%;
-      height: 170px;
-      object-fit: cover;
-      background: #eee;
-    }
-    .product-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
-    .product-body h3 { font-size: 1.05rem; color: var(--green-900); margin-bottom: 6px; }
-    .product-body .desc { font-size: 0.88rem; color: var(--muted); flex: 1; margin-bottom: 10px; }
-    .product-price {
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: var(--orange);
-      margin-bottom: 12px;
-    }
-    .product-wa {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: var(--whatsapp);
-      color: #fff;
-      padding: 11px;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: 0.2s;
-    }
-    .product-wa:hover { filter: brightness(1.08); }
+  .admin-item{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:10px 0;border-bottom:1px solid #eee;gap:10px;flex-wrap:wrap;
+  }
+  .admin-item span{font-size:.9rem;}
 
-    /* Trust / Why */
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 18px;
-    }
-    .trust-card {
-      background: var(--green-50);
-      border-radius: var(--radius);
-      padding: 24px 20px;
-      text-align: center;
-      border: 1px solid var(--green-100);
-    }
-    .trust-icon {
-      width: 52px; height: 52px;
-      background: var(--green-800);
-      color: #fff;
-      border-radius: 14px;
-      display: grid; place-items: center;
-      margin: 0 auto 14px;
-      font-size: 1.4rem;
-    }
-    .trust-card h3 { font-size: 1.05rem; color: var(--green-900); margin-bottom: 6px; }
-    .trust-card p { font-size: 0.9rem; color: var(--muted); }
-
-    /* Subsidy / Installation / Repair */
-    .info-section { background: #fff; }
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 16px;
-    }
-    .info-item {
-      background: var(--sand);
-      border-radius: 12px;
-      padding: 18px 16px;
-      border-left: 4px solid var(--green-700);
-      display: block;
-      transition: 0.2s;
-    }
-    a.info-item:hover {
-      background: var(--green-50);
-      border-left-color: var(--green-800);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .info-item h4 { color: var(--green-900); margin-bottom: 4px; font-size: 1rem; }
-    .info-item p { font-size: 0.88rem; color: var(--muted); }
-    .info-item .wa-hint {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      margin-top: 10px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--whatsapp);
-    }
-
-    /* Blog */
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .blog-card {
-      background: #fff;
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      border: 1px solid var(--border);
-      transition: 0.25s;
-    }
-    .blog-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .blog-card img { width: 100%; height: 150px; object-fit: cover; }
-    .blog-body { padding: 16px; }
-    .blog-body h3 { font-size: 1rem; color: var(--green-900); margin-bottom: 8px; line-height: 1.4; }
-    .blog-body p { font-size: 0.88rem; color: var(--muted); margin-bottom: 12px; }
-    .read-more {
-      color: var(--green-700);
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-    .read-more:hover { text-decoration: underline; }
-
-    /* Contact */
-    .contact-section { background: var(--green-50); }
-    .contact-wrap {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 28px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .contact-info h3 { color: var(--green-900); margin-bottom: 12px; }
-    .contact-info p { margin-bottom: 8px; color: var(--muted); }
-    .contact-info a { color: var(--green-800); font-weight: 600; }
-    .contact-form {
-      background: #fff;
-      padding: 24px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .form-group { margin-bottom: 14px; }
-    .form-group label {
-      display: block;
-      font-size: 0.88rem;
-      font-weight: 500;
-      margin-bottom: 4px;
-      color: var(--muted);
-    }
-    .form-group input, .form-group select, .form-group textarea {
-      width: 100%;
-      padding: 11px 14px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      font-size: 1rem;
-      font-family: inherit;
-      transition: 0.2s;
-    }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      outline: none;
-      border-color: var(--green-600);
-      box-shadow: 0 0 0 3px rgba(67,160,71,0.15);
-    }
-    .form-group textarea { min-height: 90px; resize: vertical; }
-    .btn-submit {
-      width: 100%;
-      background: var(--whatsapp);
-      color: #fff;
-      padding: 14px;
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 1rem;
-      margin-top: 8px;
-    }
-    .btn-submit:hover { filter: brightness(1.06); }
-
-    /* Footer */
-    .footer {
-      background: var(--green-900);
-      color: #e8f5e9;
-      padding: 48px 0 24px;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 28px;
-      margin-bottom: 32px;
-    }
-    .footer h4 { color: #fff; margin-bottom: 12px; font-size: 1.05rem; }
-    .footer a { color: #c8e6c9; font-size: 0.92rem; display: block; margin-bottom: 6px; }
-    .footer a:hover { color: #fff; }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.15);
-      padding-top: 18px;
-      text-align: center;
-      font-size: 0.85rem;
-      color: #a5d6a7;
-    }
-    .footer-tagline { opacity: 0.9; margin-top: 6px; font-size: 0.9rem; }
-
-    /* Admin */
-    .admin-panel {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: 2000;
-      overflow-y: auto;
-      padding: 20px;
-    }
-    .admin-panel.open { display: block; }
-    .admin-box {
-      background: #fff;
-      max-width: 720px;
-      margin: 20px auto;
-      border-radius: 16px;
-      padding: 24px;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-    .admin-box h2 { color: var(--green-900); margin-bottom: 8px; }
-    .admin-note {
-      background: #fff8e1;
-      border: 1px solid #ffe082;
-      padding: 10px 12px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      color: #5d4037;
-      margin-bottom: 16px;
-    }
-    .admin-form .form-group { margin-bottom: 12px; }
-    .admin-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
-    .btn-admin {
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-    .btn-save { background: var(--green-800); color: #fff; }
-    .btn-cancel { background: #eee; color: #333; }
-    .btn-delete { background: #c62828; color: #fff; }
-    .admin-list { margin-top: 24px; }
-    .admin-list-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      margin-bottom: 8px;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .admin-list-item span { font-size: 0.9rem; }
-    .admin-tabs { display: flex; gap: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--border); }
-    .admin-tab {
-      padding: 10px 16px; font-weight: 600; font-size: 0.9rem; color: var(--muted);
-      border-bottom: 2px solid transparent; background: none;
-    }
-    .admin-tab.active { color: var(--green-900); border-bottom-color: var(--green-800); }
-    .admin-section { display: none; }
-    .admin-section.active { display: block; }
-
-    /* Modal blog */
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-      z-index: 1500;
-      overflow-y: auto;
-      padding: 20px;
-    }
-    .modal.open { display: block; }
-    .modal-box {
-      background: #fff;
-      max-width: 680px;
-      margin: 30px auto;
-      border-radius: 16px;
-      padding: 28px 24px;
-      position: relative;
-    }
-    .modal-close {
-      position: absolute;
-      top: 12px; right: 16px;
-      background: none;
-      font-size: 1.5rem;
-      color: #666;
-      line-height: 1;
-    }
-    .modal-box h2 { color: var(--green-900); margin-bottom: 12px; padding-right: 30px; }
-    .modal-box p { margin-bottom: 12px; color: var(--muted); line-height: 1.7; }
-
-    /* Welcome offer popup */
-    .offer-popup {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      z-index: 2500;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .offer-popup.open { display: flex; }
-    .offer-popup-box {
-      background: #fff;
-      border-radius: 18px;
-      max-width: 380px;
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-      animation: popIn 0.25s ease;
-    }
-    @keyframes popIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-    .offer-popup-close {
-      position: absolute; top: 10px; right: 10px;
-      width: 32px; height: 32px; border-radius: 50%;
-      background: rgba(0,0,0,0.45); color: #fff;
-      font-size: 1.3rem; line-height: 1; display: grid; place-items: center;
-      z-index: 2;
-    }
-    .offer-popup-img {
-      height: 160px;
-      background: url('https://agritools-bazaar.lovable.app/assets/flat-drip-BIT5Ge41.jpg') center/cover;
-    }
-    .offer-popup-body { padding: 22px 20px 26px; text-align: center; }
-    .offer-popup-body .offer-badge { margin-bottom: 8px; }
-    .offer-popup-body h3 { font-size: 1.3rem; color: var(--green-900); margin-bottom: 4px; }
-    .offer-popup-body .offer-price { font-size: 1.9rem; margin: 6px 0; }
-    .offer-popup-body .offer-note { margin-bottom: 16px; }
-    .offer-popup-btns { display: flex; flex-direction: column; gap: 10px; }
-
-    /* Bottom app nav (mobile) */
-    .bottom-nav {
-      display: flex;
-      position: fixed;
-      left: 0; right: 0; bottom: 0;
-      height: var(--bottomnav-h);
-      background: #fff;
-      border-top: 1px solid var(--border);
-      box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
-      z-index: 900;
-      padding-bottom: env(safe-area-inset-bottom, 0px);
-    }
-    .bottom-nav a {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2px;
-      font-size: 0.68rem;
-      font-weight: 600;
-      color: var(--muted);
-      padding: 6px 2px;
-    }
-    .bottom-nav a .bn-icon { font-size: 1.25rem; line-height: 1; }
-    .bottom-nav a.active { color: var(--green-800); }
-    .bottom-nav a.bn-wa { color: var(--whatsapp); }
-    body { padding-bottom: var(--bottomnav-h); }
-
-    /* Responsive */
-    @media (min-width: 768px) {
-      .hamburger { display: none; }
-      .nav-desktop { display: flex; }
-      .offer-card { grid-template-columns: 1fr 1.2fr; }
-      .offer-card-img { height: auto; min-height: 220px; }
-      .contact-wrap { grid-template-columns: 1fr 1.3fr; }
-      .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
-      .hero { min-height: 560px; }
-      .bottom-nav { display: none; }
-      body { padding-bottom: 0; }
-    }
-    @media (min-width: 1024px) {
-      .nav-desktop a { font-size: 0.8rem; padding: 6px 8px; }
-    }
-    @media (max-width: 480px) {
-      .btn-call span, .btn-wa span { display: none; }
-      .hero-btns { flex-direction: column; }
-      .btn-primary, .btn-outline { width: 100%; justify-content: center; }
-    }
-  </style>
+  footer{
+    text-align:center;padding:24px 16px;font-size:.85rem;color:#777;
+    background:var(--green-light);
+  }
+  footer a{color:var(--green-dark);font-weight:600;text-decoration:none;}
+  .hidden{display:none !important;}
+</style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header-inner">
-      <a href="#home" class="logo">
-        <span class="logo-icon">🌱</span>
-        AgriToolsIndia
-      </a>
-      <nav class="nav-desktop" aria-label="Main">
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#categories">Drip Irrigation</a>
-        <a href="#categories">Sprinklers</a>
-        <a href="#categories">Farm Tools</a>
-        <a href="#categories">PVC &amp; Fittings</a>
-        <a href="#categories">Mulching &amp; Weed Mat</a>
-        <a href="#subsidy">Subsidy</a>
-        <a href="#installation">Installation</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <a href="tel:+919849735864" class="btn-call" aria-label="Call Now">📞 <span>Call</span></a>
-        <a href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20%E0%B0%A8%E0%B0%BE%E0%B0%95%E0%B1%81%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." class="btn-wa" target="_blank" rel="noopener" aria-label="WhatsApp">💬 <span>WhatsApp</span></a>
-        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#home" class="mob-link">Home</a>
-    <a href="#products" class="mob-link">Products</a>
-    <a href="#categories" class="mob-link">Drip Irrigation</a>
-    <a href="#categories" class="mob-link">Sprinklers</a>
-    <a href="#categories" class="mob-link">Farm Tools</a>
-    <a href="#categories" class="mob-link">PVC &amp; Fittings</a>
-    <a href="#categories" class="mob-link">Mulching &amp; Weed Mat</a>
-    <a href="#subsidy" class="mob-link">Subsidy</a>
-    <a href="#installation" class="mob-link">Installation</a>
-    <a href="#blog" class="mob-link">Blog</a>
-    <a href="#contact" class="mob-link">Contact</a>
-    <div class="menu-actions">
-      <a href="tel:+919849735864" class="btn-call">📞 Call Now – 9849735864</a>
-      <a href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20%E0%B0%A8%E0%B0%BE%E0%B0%95%E0%B1%81%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
-    </div>
+<header>
+  <div class="brand"><span class="logo">🌱</span> AgriToolsIndia</div>
+  <div class="header-icons">
+    <a class="icon-btn" href="tel:+911234567890" title="Call">📞</a>
+    <a class="icon-btn" href="https://wa.me/911234567890" title="WhatsApp" target="_blank" rel="noopener">💬</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
   </div>
+</header>
 
-  <!-- WELCOME OFFER POPUP -->
-  <div class="offer-popup" id="offerPopup">
-    <div class="offer-popup-box">
-      <button class="offer-popup-close" onclick="closeOfferPopup()" aria-label="Close">&times;</button>
-      <div class="offer-popup-img"></div>
-      <div class="offer-popup-body">
-        <span class="offer-badge">SPECIAL OFFER</span>
-        <h3>1 Acre Drip Kit</h3>
-        <div class="offer-price telugu">₹9,999 మాత్రమే</div>
-        <p class="offer-note telugu">పరిమిత స్టాక్ – ముందుగా బుక్ చేసుకోండి</p>
-        <div class="offer-popup-btns">
-          <a href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20%E2%82%B99%2C999%20%E0%B0%92%E0%B0%95%20%E0%B0%8E%E0%B0%95%E0%B0%B0%E0%B0%82%20%E0%B0%A1%E0%B1%8D%E0%B0%B0%E0%B0%BF%E0%B0%AA%E0%B1%8D%20%E0%B0%95%E0%B0%BF%E0%B0%9F%E0%B1%8D%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." class="btn-wa" style="padding:12px;border-radius:999px;justify-content:center;" target="_blank" rel="noopener">💬 WhatsApp Enquiry</a>
-          <a href="tel:+919849735864" class="btn-call" style="padding:12px;border-radius:999px;justify-content:center;">📞 Call Now</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<nav id="mainNav">
+  <a href="#home">హోమ్</a>
+  <a href="#products">ప్రొడక్ట్స్</a>
+  <a href="#about">మా గురించి</a>
+  <a href="#privacy">గోప్యతా విధానం</a>
+  <a href="#admin">అడ్మిన్ లాగిన్</a>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="container hero-content">
-      <div class="hero-tag telugu">రైతు కోసం • రైతు పొలం కోసం</div>
-      <h1 class="telugu">రైతు పొలానికి అవసరమైన వ్యవసాయ పరికరాలు ఒకే చోట</h1>
-      <p class="en-sub">All essential farm equipment in one place</p>
-      <div class="hero-offer">
-        <div class="price telugu">ఒక ఎకరం డ్రిప్ కిట్ కేవలం ₹9,999</div>
-        <div class="crops telugu">కూరగాయలు • మిర్చి • మొక్కజొన్న • పత్తి • ఇతర పంటలకు</div>
-      </div>
-      <div class="hero-btns">
-        <a href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20%E2%82%B99%2C999%20%E0%B0%92%E0%B0%95%20%E0%B0%8E%E0%B0%95%E0%B0%B0%E0%B0%82%20%E0%B0%A1%E0%B1%8D%E0%B0%B0%E0%B0%BF%E0%B0%AA%E0%B1%8D%20%E0%B0%95%E0%B0%BF%E0%B0%9F%E0%B1%8D%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." class="btn-primary telugu" target="_blank" rel="noopener">ఇప్పుడే ఆర్డర్ చేయండి</a>
-        <a href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20%E2%82%B99%2C999%20%E0%B0%92%E0%B0%95%20%E0%B0%8E%E0%B0%95%E0%B0%B0%E0%B0%82%20%E0%B0%A1%E0%B1%8D%E0%B0%B0%E0%B0%BF%E0%B0%AA%E0%B1%8D%20%E0%B0%95%E0%B0%BF%E0%B0%9F%E0%B1%8D%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." class="btn-outline telugu" target="_blank" rel="noopener">WhatsAppలో వివరాలు అడగండి</a>
-      </div>
+<main>
+
+  <section id="home">
+    <div class="hero">
+      <h1>రైతుల కోసం నాణ్యమైన వ్యవసాయ పరికరాలు</h1>
+      <p>డ్రిప్ ఇరిగేషన్ మరియు వ్యవసాయ సామాగ్రి — నేరుగా, సరసమైన ధరలలో</p>
     </div>
   </section>
 
-  <!-- SPECIAL OFFER -->
-  <section class="offer-section" id="offer">
-    <div class="container">
-      <div class="section-title">
-        <h2 class="telugu">ప్రత్యేక ఆఫర్</h2>
-        <p>Limited stock – book early</p>
-      </div>
-      <div class="offer-card">
-        <div class="offer-card-img" role="img" aria-label="Drip irrigation field"></div>
-        <div class="offer-card-body">
-          <span class="offer-badge">SPECIAL OFFER</span>
-          <h3>1 Acre Drip Kit</h3>
-          <div class="offer-price telugu">₹9,999 మాత్రమే</div>
-          <p class="offer-note telugu">పరిమిత స్టాక్ – ముందుగా బుక్ చేసుకోండి</p>
-          <div class="offer-btns">
-            <a href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20%E2%82%B99%2C999%20%E0%B0%92%E0%B0%95%20%E0%B0%8E%E0%B0%95%E0%B0%B0%E0%B0%82%20%E0%B0%A1%E0%B1%8D%E0%B0%B0%E0%B0%BF%E0%B0%AA%E0%B1%8D%20%E0%B0%95%E0%B0%BF%E0%B0%9F%E0%B1%8D%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." class="btn-wa" style="padding:12px 20px;border-radius:999px;" target="_blank" rel="noopener">💬 WhatsApp Enquiry</a>
-            <a href="tel:+919849735864" class="btn-call" style="padding:12px 20px;border-radius:999px;">📞 Call Now</a>
-          </div>
-        </div>
-      </div>
+  <section id="products">
+    <h2 class="section-title">Current Products</h2>
+    <div id="productsGrid" class="products-grid">
+      <p class="empty-msg">ప్రొడక్ట్స్ లోడ్ అవుతున్నాయి...</p>
     </div>
   </section>
 
-  <!-- CATEGORIES -->
-  <section id="categories">
-    <div class="container">
-      <div class="section-title">
-        <h2 class="telugu">ఉత్పత్తి విభాగాలు</h2>
-        <p>Product Categories – choose what you need</p>
-      </div>
-      <div class="categories-grid" id="categoriesGrid">
-        <!-- filled by JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section class="products-section" id="products">
-    <div class="container">
-      <div class="section-title">
-        <h2 class="telugu">ముఖ్య ఉత్పత్తులు</h2>
-        <p>Featured products – enquire for details</p>
-      </div>
-      <div class="products-grid" id="productsGrid">
-        <!-- filled by JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- SUBSIDY -->
-  <section class="info-section" id="subsidy">
-    <div class="container">
-      <div class="section-title">
-        <h2>Subsidy Assistance</h2>
-        <p class="telugu">డ్రిప్ మరియు స్ప్రింక్లర్ సిస్టమ్‌లకు అందుబాటులో ఉన్న సబ్సిడీ పథకాలపై రైతులకు మార్గదర్శనం అందిస్తాము.</p>
-      </div>
-      <div class="info-grid">
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20Scheme%20Guidance%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>Scheme Guidance</h4>
-          <p class="telugu">ప్రభుత్వ మైక్రో ఇరిగేషన్ పథకాల గురించి సమాచారం మరియు మార్గదర్శనం.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20Application%20Guidance%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>Application Guidance</h4>
-          <p class="telugu">దరఖాస్తు ప్రక్రియ, అవసరమైన దశలు మరియు ఎక్కడ సమర్పించాలో వివరాలు.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20Required%20Documents%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>Required Documents</h4>
-          <p class="telugu">భూమి పత్రాలు, ఆధార్, కుల ధృవీకరణ మొదలైన అవసరమైన పత్రాల జాబితా.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20System%20Selection%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>System Selection</h4>
-          <p class="telugu">పంట, నేల, నీటి వనరు ఆధారంగా సరైన డ్రిప్/స్ప్రింక్లర్ ఎంపికలో సహాయం.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-      </div>
-      <p style="text-align:center;margin-top:24px;font-size:0.9rem;color:var(--muted);">
-        We provide guidance only. Subsidy eligibility and percentage depend on government schemes and individual farmer status. We do not guarantee any specific subsidy amount.
+  <section id="about">
+    <h2 class="section-title">మా గురించి</h2>
+    <div class="card">
+      <p>
+        AgriToolsIndia తెలంగాణలోని రైతులకు నాణ్యమైన, సరసమైన ధరలలో వ్యవసాయ పరికరాలు మరియు
+        డ్రిప్ ఇరిగేషన్ సామాగ్రిని అందించే లక్ష్యంతో ప్రారంభించబడింది. చిన్న, సన్నకారు రైతుల నుండి
+        పెద్ద భూస్వాముల వరకు — అందరికీ నమ్మకమైన సేవలు అందించడమే మా ధ్యేయం.
       </p>
-      <div style="text-align:center;margin-top:16px;">
-        <a href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20%E0%B0%A1%E0%B1%8D%E0%B0%B0%E0%B0%BF%E0%B0%AA%2F%E0%B0%B8%E0%B1%8D%E0%B0%AA%E0%B1%8D%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%95%E0%B1%8D%E0%B0%B2%E0%B0%B0%E0%B1%8D%20%E0%B0%B8%E0%B0%AC%E0%B1%8D%E0%B0%B8%E0%B0%BF%E0%B0%A1%E0%B1%80%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." class="btn-wa" style="padding:12px 24px;border-radius:999px;display:inline-flex;" target="_blank" rel="noopener">💬 Enquire about Subsidy</a>
-      </div>
+      <ul>
+        <li>నీటిని ఆదా చేసే డ్రిప్ ఇరిగేషన్ పరిష్కారాలను ప్రతి రైతుకూ చేరువ చేయడం</li>
+        <li>నాణ్యమైన ఉత్పత్తులను నేరుగా, మధ్యవర్తులు లేకుండా అందించడం</li>
+        <li>ఫోన్ / వాట్సాప్ ద్వారా సులభమైన, వేగవంతమైన సంప్రదింపు</li>
+      </ul>
     </div>
   </section>
 
-  <!-- INSTALLATION -->
-  <section id="installation" style="background:var(--sand);">
-    <div class="container">
-      <div class="section-title">
-        <h2>System Installation</h2>
-        <p class="telugu">పొలం సైజు ప్రకారం డ్రిప్/స్ప్రింక్లర్ లేఅవుట్ డిజైన్ చేసి అమర్చుతాము.</p>
-      </div>
-      <div class="info-grid">
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20Field%20Measurement%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>Field Measurement</h4>
-          <p class="telugu">పొలం కొలతలు మరియు నీటి వనరు అంచనా.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20Layout%20Planning%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>Layout Planning</h4>
-          <p class="telugu">పంటకు అనుగుణంగా లేఅవుట్ డిజైన్.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20Drip%20Installation%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>Drip Installation</h4>
-          <p class="telugu">డ్రిప్ లైన్లు, ఫిట్టింగ్స్ అమర్పు.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20Sprinkler%20Installation%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>Sprinkler Installation</h4>
-          <p class="telugu">స్ప్రింక్లర్ / రైన్ గన్ సెటప్.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20Filter%20Installation%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>Filter Installation</h4>
-          <p class="telugu">డిస్క్ / స్క్రీన్ ఫిల్టర్ అమర్పు.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20Testing%20%26%20Guidance%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>Testing &amp; Guidance</h4>
-          <p class="telugu">సిస్టమ్ టెస్టింగ్ మరియు రైతు గైడెన్స్.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-      </div>
-      <div style="text-align:center;margin-top:24px;">
-        <a href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20%E0%B0%A1%E0%B1%8D%E0%B0%B0%E0%B0%BF%E0%B0%AA%2F%E0%B0%B8%E0%B1%8D%E0%B0%AA%E0%B1%8D%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%95%E0%B1%8D%E0%B0%B2%E0%B0%B0%E0%B1%8D%20%E0%B0%87%E0%B0%A8%E0%B1%8D%E2%80%8C%E0%B0%B8%E0%B1%8D%E0%B0%9F%E0%B0%BE%E0%B0%B2%E0%B1%87%E0%B0%B7%E0%B0%A8%E0%B1%8D%20%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%9A%E0%B0%BF%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." class="btn-wa" style="padding:12px 24px;border-radius:999px;display:inline-flex;" target="_blank" rel="noopener">💬 Book Installation</a>
-      </div>
+  <section id="privacy">
+    <h2 class="section-title">గోప్యతా విధానం (Privacy Policy)</h2>
+    <div class="card">
+      <p><strong>1. సమాచార సేకరణ:</strong> మీరు ఫోన్ లేదా వాట్సాప్ ద్వారా సంప్రదించినప్పుడు మీరు
+        స్వచ్ఛందంగా ఇచ్చే పేరు, ఫోన్ నంబర్, ఆర్డర్ వివరాలు మాత్రమే మేము పొందుతాము. పాస్‌వర్డ్‌లు,
+        చెల్లింపు కార్డు వివరాలు వెబ్‌సైట్ ద్వారా సేకరించము.</p>
+      <p><strong>2. వినియోగం:</strong> ఈ సమాచారాన్ని ఆర్డర్ ప్రాసెసింగ్, డెలివరీ కోసం మాత్రమే
+        ఉపయోగిస్తాము. మూడవ పక్షాలకు అమ్మము / అద్దెకు ఇవ్వము.</p>
+      <p><strong>3. డేటా భద్రత:</strong> ప్రొడక్ట్ జాబితా Supabase సురక్షిత క్లౌడ్ డేటాబేస్‌లో
+        నిల్వ ఉంటుంది.</p>
+      <p><strong>4. కుకీలు:</strong> ఈ సైట్ ట్రాకింగ్ కుకీలను ఉపయోగించదు; అవసరమైన సాంకేతిక
+        కుకీలు మాత్రమే ఉండవచ్చు.</p>
+      <p><strong>5. మీ హక్కులు:</strong> మీ సమాచారాన్ని తొలగించమని ఎప్పుడైనా ఫోన్ / వాట్సాప్
+        ద్వారా అభ్యర్థించవచ్చు.</p>
     </div>
   </section>
 
-  <!-- REPAIR -->
-  <section id="repair">
-    <div class="container">
-      <div class="section-title">
-        <h2>Repair &amp; Maintenance</h2>
-        <p class="telugu">డ్రిప్ / స్ప్రింక్లర్ సిస్టమ్ మరమ్మత్తు మరియు నిర్వహణ</p>
+  <section id="admin">
+    <h2 class="section-title">Admin Panel</h2>
+
+    <div class="card" id="loginCard">
+      <form class="stacked" id="loginForm">
+        <label>Email</label>
+        <input type="email" id="loginEmail" required placeholder="admin@agritoolsindia.com">
+        <label>Password</label>
+        <input type="password" id="loginPassword" required placeholder="••••••••">
+        <button class="btn" type="submit">లాగిన్</button>
+        <div class="status-msg" id="loginStatus"></div>
+      </form>
+    </div>
+
+    <div class="card hidden" id="adminPanel">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <strong>Logged in ✅</strong>
+        <button class="btn btn-outline" id="logoutBtn">లాగ్ అవుట్</button>
       </div>
-      <div class="info-grid">
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20Pipe%20Leakage%20%E0%B0%B0%E0%B0%BF%E0%B0%AA%E0%B1%87%E0%B0%B0%E0%B1%8D%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>Pipe Leakage</h4>
-          <p class="telugu">పైప్ లీకేజీలు గుర్తించి మరమ్మత్తు.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20Dripper%20Blockage%20%E0%B0%B0%E0%B0%BF%E0%B0%AA%E0%B1%87%E0%B0%B0%E0%B1%8D%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>Dripper Blockage</h4>
-          <p class="telugu">డ్రిప్పర్ బ్లాకేజీ క్లీనింగ్ / రీప్లేస్‌మెంట్.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20Filter%20Problems%20%E0%B0%B0%E0%B0%BF%E0%B0%AA%E0%B1%87%E0%B0%B0%E0%B1%8D%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>Filter Problems</h4>
-          <p class="telugu">ఫిల్టర్ క్లీనింగ్ మరియు సేవీసింగ్.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20Fitting%20Replacement%20%E0%B0%B0%E0%B0%BF%E0%B0%AA%E0%B1%87%E0%B0%B0%E0%B1%8D%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>Fitting Replacement</h4>
-          <p class="telugu">పాడైన ఫిట్టింగ్స్ మార్పిడి.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-        <a class="info-item" href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20System%20Maintenance%20%E0%B0%B0%E0%B0%BF%E0%B0%AA%E0%B1%87%E0%B0%B0%E0%B1%8D%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." target="_blank" rel="noopener">
-          <h4>System Maintenance</h4>
-          <p class="telugu">కాలానుగుణ నిర్వహణ మరియు చెకప్.</p>
-          <span class="wa-hint">💬 WhatsApp</span>
-        </a>
-      </div>
-      <div style="text-align:center;margin-top:24px;">
-        <a href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20%E0%B0%A1%E0%B1%8D%E0%B0%B0%E0%B0%BF%E0%B0%AA%2F%E0%B0%B8%E0%B1%8D%E0%B0%AA%E0%B1%8D%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%95%E0%B1%8D%E0%B0%B2%E0%B0%B0%E0%B1%8D%20%E0%B0%B0%E0%B0%BF%E0%B0%AA%E0%B1%87%E0%B0%B0%E0%B1%8D%20%2F%20%E0%B0%AE%E0%B1%86%E0%B0%82%E0%B0%9F%E0%B1%86%E0%B0%A8%E0%B1%86%E0%B0%A8%E0%B1%8D%E0%B0%B8%E0%B1%8D%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." class="btn-wa" style="padding:12px 24px;border-radius:999px;display:inline-flex;" target="_blank" rel="noopener">💬 Repair Enquiry</a>
-      </div>
+
+      <h3>కొత్త ప్రొడక్ట్ యాడ్ చేయండి</h3>
+      <form class="stacked" id="addForm">
+        <label>Product Name</label>
+        <input type="text" id="pName" required>
+        <label>Description</label>
+        <textarea id="pDesc"></textarea>
+        <label>Price (e.g. ₹1,500 or "Contact for Price")</label>
+        <input type="text" id="pPrice">
+        <label>Image URL (optional)</label>
+        <input type="text" id="pImage" placeholder="https://...">
+        <label>Category (optional)</label>
+        <input type="text" id="pCategory">
+        <label><input type="checkbox" id="pFeatured" style="width:auto;"> Featured product</label>
+        <button class="btn" type="submit">Add Product</button>
+        <div class="status-msg" id="addStatus"></div>
+      </form>
+
+      <h3 style="margin-top:24px;">ప్రస్తుత ప్రొడక్ట్స్ (Edit / Delete)</h3>
+      <div id="adminList"></div>
     </div>
   </section>
 
-  <!-- WHY -->
-  <section style="background:var(--green-50);">
-    <div class="container">
-      <div class="section-title">
-        <h2 class="telugu">ఎందుకు AgriToolsIndia?</h2>
-        <p>Why farmers choose us</p>
-      </div>
-      <div class="trust-grid">
-        <div class="trust-card">
-          <div class="trust-icon">👨‍🌾</div>
-          <h3>Farmer-focused Service</h3>
-          <p class="telugu">రైతు అవసరాలకు అనుగుణంగా సేవలు.</p>
-        </div>
-        <div class="trust-card">
-          <div class="trust-icon">✓</div>
-          <h3>Quality Equipment</h3>
-          <p class="telugu">నాణ్యమైన వ్యవసాయ పరికరాలు.</p>
-        </div>
-        <div class="trust-card">
-          <div class="trust-icon">🔧</div>
-          <h3>Installation Support</h3>
-          <p class="telugu">లేఅవుట్ మరియు అమర్పు సహాయం.</p>
-        </div>
-        <div class="trust-card">
-          <div class="trust-icon">🛠️</div>
-          <h3>Repair &amp; Maintenance</h3>
-          <p class="telugu">మరమ్మత్తు మరియు నిర్వహణ సేవలు.</p>
-        </div>
-        <div class="trust-card">
-          <div class="trust-icon">📋</div>
-          <h3>Subsidy Guidance</h3>
-          <p class="telugu">సబ్సిడీ పథకాలపై మార్గదర్శనం.</p>
-        </div>
-        <div class="trust-card">
-          <div class="trust-icon">📍</div>
-          <h3>TS &amp; AP Service</h3>
-          <p class="telugu">తెలంగాణ &amp; ఆంధ్రప్రదేశ్ సేవా ప్రాంతం.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+</main>
 
-  <!-- BLOG -->
-  <section id="blog">
-    <div class="container">
-      <div class="section-title">
-        <h2 class="telugu">బ్లాగ్ / సమాచారం</h2>
-        <p>Helpful articles for farmers</p>
-      </div>
-      <div class="blog-grid" id="blogGrid">
-        <!-- filled by JS -->
-      </div>
-    </div>
-  </section>
+<footer>
+  © 2026 AgriToolsIndia. All rights reserved. |
+  <a href="tel:+911234567890">Call</a> ·
+  <a href="https://wa.me/911234567890" target="_blank" rel="noopener">WhatsApp</a>
+</footer>
 
-  <!-- CONTACT -->
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="section-title">
-        <h2 class="telugu">సంప్రదించండి</h2>
-        <p>Contact AgriToolsIndia</p>
-      </div>
-      <div class="contact-wrap">
-        <div class="contact-info">
-          <h3>AgriToolsIndia</h3>
-          <p>📞 Phone: <a href="tel:+919849735864">9849735864</a></p>
-          <p>💬 WhatsApp: <a href="https://wa.me/919849735864" target="_blank" rel="noopener">9849735864</a></p>
-          <p>📍 Service Area: Telangana &amp; Andhra Pradesh</p>
-          <p class="telugu" style="margin-top:12px;">రైతు కోసం • రైతు పొలం కోసం</p>
-        </div>
-        <form class="contact-form" id="contactForm" onsubmit="return submitContact(event)">
-          <div class="form-group">
-            <label for="cname">Name / పేరు</label>
-            <input type="text" id="cname" required placeholder="Your name">
-          </div>
-          <div class="form-group">
-            <label for="cmobile">Mobile Number / మొబైల్</label>
-            <input type="tel" id="cmobile" required placeholder="10-digit mobile" pattern="[0-9]{10}">
-          </div>
-          <div class="form-group">
-            <label for="cdistrict">District / జిల్లా</label>
-            <input type="text" id="cdistrict" placeholder="e.g. Warangal, Guntur">
-          </div>
-          <div class="form-group">
-            <label for="creq">Requirement / అవసరం</label>
-            <select id="creq">
-              <option value="">Select</option>
-              <option>1 Acre Drip Kit</option>
-              <option>Drip Irrigation</option>
-              <option>Sprinklers / Rain Guns</option>
-              <option>PVC &amp; Fittings</option>
-              <option>Mulching / Weed Mat</option>
-              <option>Farm Tools</option>
-              <option>Subsidy Guidance</option>
-              <option>Installation</option>
-              <option>Repair</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="cmsg">Message / సందేశం</label>
-            <textarea id="cmsg" placeholder="Your message (optional)"></textarea>
-          </div>
-          <button type="submit" class="btn-submit">💬 Send via WhatsApp</button>
-        </form>
-      </div>
-    </div>
-  </section>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const SUPABASE_URL = "https://gfninjrbkdcwnkvqsouj.supabase.co";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdmbmluanJia2Rjd25rdnFzb3VqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAxMjg3MDUsImV4cCI6MjEwNTcwNDcwNX0.se1z7HumhOuZnD0FPvHUNzFo6pSY87aELVxmse0KdPM";
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4>AgriToolsIndia</h4>
-          <p class="footer-tagline telugu">రైతు కోసం • రైతు పొలం కోసం</p>
-          <p style="margin-top:10px;font-size:0.9rem;">📞 9849735864</p>
-        </div>
-        <div>
-          <h4>Quick Links</h4>
-          <a href="#home">Home</a>
-          <a href="#products">Products</a>
-          <a href="#subsidy">Subsidy</a>
-          <a href="#installation">Installation</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div>
-          <h4>Products</h4>
-          <a href="#categories">Drip Irrigation</a>
-          <a href="#categories">Sprinklers</a>
-          <a href="#categories">PVC &amp; Fittings</a>
-          <a href="#categories">Mulching &amp; Weed Mat</a>
-        </div>
-        <div>
-          <h4>Service</h4>
-          <a href="#subsidy">Subsidy Assistance</a>
-          <a href="#installation">System Installation</a>
-          <a href="#repair">Repair &amp; Maintenance</a>
-          <a href="#blog">Blog</a>
+  // ---- Menu toggle ----
+  document.getElementById('menuToggle').addEventListener('click', () => {
+    document.getElementById('mainNav').classList.toggle('open');
+  });
+  document.querySelectorAll('#mainNav a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('mainNav').classList.remove('open'));
+  });
+
+  // ---- Load products (public) ----
+  async function loadProducts() {
+    const grid = document.getElementById('productsGrid');
+    const { data, error } = await supabase
+      .from('products')
+      .select('*')
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      grid.innerHTML = '<p class="empty-msg">ప్రొడక్ట్స్ లోడ్ చేయడంలో సమస్య.</p>';
+      console.error(error);
+      return;
+    }
+    if (!data || data.length === 0) {
+      grid.innerHTML = '<p class="empty-msg">ప్రొడక్ట్స్ లేవు.</p>';
+      return;
+    }
+    grid.innerHTML = data.map(p => `
+      <div class="product-card">
+        ${p.image_url ? `<img src="${escapeAttr(p.image_url)}" alt="${escapeAttr(p.name)}">` : ''}
+        <div class="product-body">
+          ${p.featured ? '<span class="badge">Featured</span>' : ''}
+          <h3>${escapeHtml(p.name)}</h3>
+          <div class="product-price">${p.price ? escapeHtml(p.price) : 'Contact for Price'}</div>
+          ${p.description ? `<p class="product-desc">${escapeHtml(p.description)}</p>` : ''}
         </div>
       </div>
-      <div class="footer-bottom">
-        © 2026 AgriToolsIndia. All Rights Reserved.
-      </div>
-    </div>
-  </footer>
+    `).join('');
+  }
 
-  <!-- BOTTOM APP NAV (mobile) -->
-  <nav class="bottom-nav" id="bottomNav" aria-label="App navigation">
-    <a href="#home" class="bn-link active"><span class="bn-icon">🏠</span>Home</a>
-    <a href="#products" class="bn-link"><span class="bn-icon">🛒</span>Products</a>
-    <a href="#blog" class="bn-link"><span class="bn-icon">📰</span>Blog</a>
-    <a href="#contact" class="bn-link"><span class="bn-icon">☎️</span>Contact</a>
-    <a href="https://wa.me/919849735864?text=%E0%B0%A8%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%95%E0%B0%BE%E0%B0%B0%E0%B0%82%20AgriToolsIndia%2C%20%E0%B0%A8%E0%B0%BE%E0%B0%95%E0%B1%81%20%E0%B0%B5%E0%B0%BF%E0%B0%B5%E0%B0%B0%E0%B0%BE%E0%B0%B2%E0%B1%81%20%E0%B0%95%E0%B0%BE%E0%B0%B5%E0%B0%BE%E0%B0%B2%E0%B0%BF." class="bn-wa" target="_blank" rel="noopener"><span class="bn-icon">💬</span>WhatsApp</a>
-  </nav>
+  function escapeHtml(str){
+    return String(str).replace(/[&<>"']/g, s => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    }[s]));
+  }
+  function escapeAttr(str){ return escapeHtml(str); }
 
-  <!-- ADMIN PANEL -->
-  <div class="admin-panel" id="adminPanel">
-    <div class="admin-box">
-      <h2>Admin – నిర్వహణ</h2>
-      <div class="admin-note">
-        <strong>ప్రొడక్ట్స్ మరియు బ్లాగ్ పోస్ట్‌లు రెండూ ఇక్కడి నుండి నిర్వహించవచ్చు.</strong><br>
-        Supabase తో కనెక్ట్ అయింది – మార్పులు అన్ని డివైస్‌లలో కనిపిస్తాయి.
-      </div>
+  loadProducts();
 
-      <div id="loginBox" style="display:none">
-        <h3 style="margin-bottom:10px">Admin Login</h3>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" id="lEmail" autocomplete="username">
-        </div>
-        <div class="form-group">
-          <label>Password</label>
-          <input type="password" id="lPass" autocomplete="current-password">
-        </div>
-        <div class="admin-actions">
-          <button type="button" class="btn-admin btn-save" id="loginBtn">Login</button>
-          <button type="button" class="btn-admin btn-cancel" onclick="closeAdmin()">Close</button>
-        </div>
-      </div>
+  // ---- Auth ----
+  const loginForm = document.getElementById('loginForm');
+  const loginCard = document.getElementById('loginCard');
+  const adminPanel = document.getElementById('adminPanel');
+  const loginStatus = document.getElementById('loginStatus');
 
-      <div id="adminLoggedIn" style="display:none">
-        <div class="admin-tabs">
-          <button type="button" class="admin-tab active" id="tabProductsBtn" onclick="switchAdminTab('products')">Products</button>
-          <button type="button" class="admin-tab" id="tabBlogBtn" onclick="switchAdminTab('blog')">Blog Posts</button>
-        </div>
+  async function checkSession() {
+    const { data } = await supabase.auth.getSession();
+    if (data.session) {
+      loginCard.classList.add('hidden');
+      adminPanel.classList.remove('hidden');
+      loadAdminList();
+    } else {
+      loginCard.classList.remove('hidden');
+      adminPanel.classList.add('hidden');
+    }
+  }
+  checkSession();
 
-        <!-- PRODUCTS TAB -->
-        <div class="admin-section active" id="tabProducts">
-          <form class="admin-form" id="adminForm" onsubmit="return saveProduct(event)">
-            <input type="hidden" id="editId">
-            <div class="form-group">
-              <label>Product Name</label>
-              <input type="text" id="pName" required>
-            </div>
-            <div class="form-group">
-              <label>Description</label>
-              <textarea id="pDesc" rows="2"></textarea>
-            </div>
-            <div class="form-group">
-              <label>ధర / Price (ఉదా: ₹1,500 లేదా Contact for Price)</label>
-              <input type="text" id="pPrice" placeholder="₹1,500 లేదా Contact for Price">
-            </div>
-            <div class="form-group">
-              <label>ఇమేజ్ URL / Image URL (ఫోటో లింక్ పేస్ట్ చేయండి)</label>
-              <input type="url" id="pImage" placeholder="https://example.com/photo.jpg">
-              <small style="display:block;margin-top:4px;color:#666;font-size:0.8rem;">ఇమేజ్ లింక్ పేస్ట్ చేస్తే ప్రొడక్ట్ ఫోటో మారుతుంది. కొత్త ప్రొడక్ట్‌కు కూడా ఇమేజ్ + ధర జోడించవచ్చు.</small>
-            </div>
-            <div class="form-group">
-              <label>📷 గ్యాలరీ / కెమెరా నుండి ఫోటో (Upload from gallery)</label>
-              <input type="file" id="pFile" accept="image/*">
-              <img id="pPreview" alt="" style="display:none;max-width:140px;margin-top:8px;border-radius:8px">
-            </div>
-            <div class="form-group">
-              <label>Category</label>
-              <select id="pCategory">
-                <option>Drip Irrigation</option>
-                <option>Sprinklers</option>
-                <option>Rain Guns</option>
-                <option>Farm Tools &amp; Machinery</option>
-                <option>PVC &amp; Fittings</option>
-                <option>Filters</option>
-                <option>Mulching</option>
-                <option>Weed Mat</option>
-                <option>Lapeta / Rain Pipe</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label><input type="checkbox" id="pFeatured"> Mark as Featured</label>
-            </div>
-            <div class="admin-actions">
-              <button type="submit" class="btn-admin btn-save">Save Product</button>
-              <button type="button" class="btn-admin btn-cancel" onclick="resetAdminForm()">New / Clear</button>
-              <button type="button" class="btn-admin btn-delete" id="deleteBtn" style="display:none;" onclick="deleteCurrentProduct()">Delete</button>
-            </div>
-          </form>
-          <div class="admin-list" id="adminList"></div>
-        </div>
+  loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value.trim();
+    const password = document.getElementById('loginPassword').value;
+    loginStatus.textContent = 'లాగిన్ అవుతోంది...';
+    loginStatus.className = 'status-msg';
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error) {
+      loginStatus.textContent = 'లాగిన్ విఫలమైంది: ' + error.message;
+      loginStatus.className = 'status-msg err';
+      return;
+    }
+    loginStatus.textContent = '';
+    checkSession();
+  });
 
-        <!-- BLOG TAB -->
-        <div class="admin-section" id="tabBlog">
-          <form class="admin-form" id="blogForm" onsubmit="return saveBlog(event)">
-            <input type="hidden" id="editBlogId">
-            <div class="form-group">
-              <label>Blog Title / శీర్షిక</label>
-              <input type="text" id="bTitle" required placeholder="పోస్ట్ శీర్షిక">
-            </div>
-            <div class="form-group">
-              <label>Short Summary / సంక్షిప్త వివరణ (కార్డ్‌పై కనిపిస్తుంది)</label>
-              <textarea id="bShort" rows="2" placeholder="1-2 lines summary"></textarea>
-            </div>
-            <div class="form-group">
-              <label>Full Content / పూర్తి కంటెంట్ (HTML సపోర్ట్ చేస్తుంది, ఉదా: &lt;p&gt;...&lt;/p&gt;)</label>
-              <textarea id="bBody" rows="6" placeholder="&lt;p&gt;మీ పూర్తి పోస్ట్ ఇక్కడ రాయండి...&lt;/p&gt;"></textarea>
-            </div>
-            <div class="form-group">
-              <label>Cover Image URL</label>
-              <input type="url" id="bImage" placeholder="https://example.com/photo.jpg">
-            </div>
-            <div class="form-group">
-              <label>📷 గ్యాలరీ నుండి కవర్ ఫోటో</label>
-              <input type="file" id="bFile" accept="image/*">
-              <img id="bPreview" alt="" style="display:none;max-width:140px;margin-top:8px;border-radius:8px">
-            </div>
-            <div class="admin-actions">
-              <button type="submit" class="btn-admin btn-save">Save Blog Post</button>
-              <button type="button" class="btn-admin btn-cancel" onclick="resetBlogForm()">New / Clear</button>
-              <button type="button" class="btn-admin btn-delete" id="deleteBlogBtn" style="display:none;" onclick="deleteCurrentBlog()">Delete</button>
-            </div>
-          </form>
-          <div class="admin-list" id="blogAdminList"></div>
-        </div>
+  document.getElementById('logoutBtn').addEventListener('click', async () => {
+    await supabase.auth.signOut();
+    checkSession();
+  });
 
-        <div class="admin-actions" style="margin-top:20px;border-top:1px solid var(--border);padding-top:16px;">
-          <button type="button" class="btn-admin btn-cancel" onclick="closeAdmin()">Close</button>
-          <button type="button" class="btn-admin btn-cancel" id="logoutBtn">Logout</button>
+  // ---- Admin: add product ----
+  const addForm = document.getElementById('addForm');
+  const addStatus = document.getElementById('addStatus');
+
+  addForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const payload = {
+      name: document.getElementById('pName').value.trim(),
+      description: document.getElementById('pDesc').value.trim() || null,
+      price: document.getElementById('pPrice').value.trim() || null,
+      image_url: document.getElementById('pImage').value.trim() || null,
+      category: document.getElementById('pCategory').value.trim() || null,
+      featured: document.getElementById('pFeatured').checked
+    };
+    addStatus.textContent = 'సేవ్ అవుతోంది...';
+    addStatus.className = 'status-msg';
+    const { error } = await supabase.from('products').insert(payload);
+    if (error) {
+      addStatus.textContent = 'Error: ' + error.message;
+      addStatus.className = 'status-msg err';
+      return;
+    }
+    addStatus.textContent = 'ప్రొడక్ట్ యాడ్ అయ్యింది ✅';
+    addStatus.className = 'status-msg ok';
+    addForm.reset();
+    loadProducts();
+    loadAdminList();
+  });
+
+  // ---- Admin: list with edit/delete ----
+  async function loadAdminList() {
+    const list = document.getElementById('adminList');
+    const { data, error } = await supabase
+      .from('products')
+      .select('*')
+      .order('created_at', { ascending: false });
+    if (error || !data) { list.innerHTML = ''; return; }
+
+    list.innerHTML = data.map(p => `
+      <div class="admin-item" data-id="${p.id}">
+        <span><strong>${escapeHtml(p.name)}</strong> — ${p.price ? escapeHtml(p.price) : 'Contact for Price'}</span>
+        <div class="row-actions">
+          <button class="btn btn-outline btn-edit" data-id="${p.id}">Edit</button>
+          <button class="btn btn-danger btn-delete" data-id="${p.id}">Delete</button>
         </div>
       </div>
-    </div>
-  </div>
+    `).join('');
 
-  <!-- BLOG MODAL -->
-  <div class="modal" id="blogModal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeBlog()" aria-label="Close">&times;</button>
-      <h2 id="blogModalTitle"></h2>
-      <div id="blogModalBody"></div>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-
-  <script>
-    // ========== DATA ==========
-    const CATEGORIES = [
-      { name: "Drip Irrigation", img: "https://agritools-bazaar.lovable.app/assets/flat-drip-BIT5Ge41.jpg" },
-      { name: "Sprinklers", img: "https://agritools-bazaar.lovable.app/assets/sprinkler-CbqB-5Gk.jpg" },
-      { name: "Rain Guns", img: "https://agritools-bazaar.lovable.app/assets/sprinkler-CbqB-5Gk.jpg" },
-      { name: "Farm Tools & Machinery", img: "https://agritools-bazaar.lovable.app/assets/farm-tools-DPTcJ5MH.jpg" },
-      { name: "PVC & Fittings", img: "https://agritools-bazaar.lovable.app/assets/fittings-DuOuiIQg.jpg" },
-      { name: "Filters", img: "https://agritools-bazaar.lovable.app/assets/fittings-DuOuiIQg.jpg" },
-      { name: "Mulching", img: "https://agritools-bazaar.lovable.app/assets/mulching-CgoRW8CG.jpg" },
-      { name: "Weed Mat", img: "https://agritools-bazaar.lovable.app/assets/mulching-CgoRW8CG.jpg" },
-      { name: "Lapeta / Rain Pipe", img: "https://agritools-bazaar.lovable.app/assets/lapeta-kQ5ZXd5A.jpg" },
-      { name: "Subsidy Assistance", img: "https://agritools-bazaar.lovable.app/assets/hero-farmer-3oGNTqbU.jpg" },
-      { name: "System Installation", img: "https://agritools-bazaar.lovable.app/assets/hero-farmer-3oGNTqbU.jpg" },
-      { name: "Repair & Maintenance", img: "https://agritools-bazaar.lovable.app/assets/farm-tools-DPTcJ5MH.jpg" }
-    ];
-
-    // NOTE: ids below are real UUIDs (not "p1","p2"...) because the Supabase
-    // "products.id" column is type uuid. Using plain text ids like "p1" caused:
-    // "invalid input syntax for type uuid: \"p1\"" when saving.
-    const DEFAULT_PRODUCTS = [
-      { id: "a1111111-1111-4111-8111-111111111101", name: "16mm Flat Inline Drip Pipe", desc: "4 LPH • 1000 Meter", price: "₹1,500", image: "https://agritools-bazaar.lovable.app/assets/flat-drip-BIT5Ge41.jpg", category: "Drip Irrigation", featured: true },
-      { id: "a1111111-1111-4111-8111-111111111102", name: "Flat Inline Drip Pipe", desc: "Spacing options: 40 cm / 50 cm / 60 cm", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/inline-drip-B329a_u-.jpg", category: "Drip Irrigation", featured: true },
-      { id: "a1111111-1111-4111-8111-111111111103", name: "Drip Fittings", desc: "Connectors, taps & accessories for drip systems", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/fittings-DuOuiIQg.jpg", category: "Drip Irrigation", featured: true },
-      { id: "a1111111-1111-4111-8111-111111111104", name: "PVC Pipes & Fittings", desc: "Agricultural PVC pipes and compression fittings", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/fittings-DuOuiIQg.jpg", category: "PVC & Fittings", featured: true },
-      { id: "a1111111-1111-4111-8111-111111111105", name: "Disc / Screen Filters", desc: "Filters for drip and sprinkler systems", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/fittings-DuOuiIQg.jpg", category: "Filters", featured: true },
-      { id: "a1111111-1111-4111-8111-111111111106", name: "Sprinklers", desc: "Sprinkler sets for field irrigation", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/sprinkler-CbqB-5Gk.jpg", category: "Sprinklers", featured: true },
-      { id: "a1111111-1111-4111-8111-111111111107", name: "Rain Guns", desc: "Long-range rain guns for larger areas", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/sprinkler-CbqB-5Gk.jpg", category: "Rain Guns", featured: true },
-      { id: "a1111111-1111-4111-8111-111111111108", name: "Lapeta / Rain Pipe", desc: "Rain pipe for flexible irrigation use", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/lapeta-kQ5ZXd5A.jpg", category: "Lapeta / Rain Pipe", featured: true },
-      { id: "a1111111-1111-4111-8111-111111111109", name: "Farm Tools", desc: "Essential farm tools and implements", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/farm-tools-DPTcJ5MH.jpg", category: "Farm Tools & Machinery", featured: true },
-      { id: "a1111111-1111-4111-8111-111111111110", name: "Mulching Sheet", desc: "Agricultural mulching sheets", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/mulching-CgoRW8CG.jpg", category: "Mulching", featured: true },
-      { id: "a1111111-1111-4111-8111-111111111111", name: "Weed Mat", desc: "Weed control mat for farms and plantations", price: "Contact for Price", image: "https://agritools-bazaar.lovable.app/assets/mulching-CgoRW8CG.jpg", category: "Weed Mat", featured: true }
-    ];
-
-    // Same fix applied to blog ids: real UUIDs instead of "b1","b2"...
-    const DEFAULT_BLOGS = [
-      { id: "b2222222-2222-4222-8222-222222222201", title: "ఒక ఎకరం డ్రిప్ కిట్ ₹9,999 – రైతులు తెలుసుకోవాల్సిన విషయాలు", short: "₹9,999 డ్రిప్ కిట్ ఆఫర్ గురించి ముఖ్యమైన వివరాలు మరియు జాగ్రత్తలు.", img: "https://agritools-bazaar.lovable.app/assets/flat-drip-BIT5Ge41.jpg", body: "<p class='telugu'>ఒక ఎకరం డ్రిప్ కిట్ ₹9,999 ఆఫర్ రైతులకు ఆకర్షణీయంగా ఉంది. ఈ ఆఫర్‌లో సాధారణంగా డ్రిప్ పైప్, ఫిట్టింగ్స్ మరియు ప్రాథమిక భాగాలు ఉంటాయి. పూర్తి ప్యాకేజ్ వివరాలు, పొలం పరిమాణం మరియు పంటకు అనుగుణంగా అదనపు భాగాలు అవసరమవుతాయో మా టీమ్‌ను అడగండి.</p><p>Contact us on WhatsApp for exact package contents, delivery and installation support. Stock is limited.</p>" },
-      { id: "b2222222-2222-4222-8222-222222222202", title: "Drip Irrigation ఎలా ఎంచుకోవాలి?", short: "పంట, నేల, నీటి వనరు ఆధారంగా సరైన డ్రిప్ సిస్టమ్ ఎంపిక.", img: "https://agritools-bazaar.lovable.app/assets/inline-drip-B329a_u-.jpg", body: "<p class='telugu'>డ్రిప్ ఇరిగేషన్ ఎంచుకునేటప్పుడు పంట రకం (కూరగాయలు, మిర్చి, పత్తి మొదలైనవి), నేల రకం, నీటి వనరు ఒత్తిడి మరియు పొలం సైజు చూడాలి. Inline vs Flat drip, డ్రిప్పర్ స్పేసింగ్, ఫిల్టర్ రకం ముఖ్యం.</p><p>Our team can help you choose the right layout after understanding your field and crop.</p>" },
-      { id: "b2222222-2222-4222-8222-222222222203", title: "డ్రిప్ పైప్ కొనేటప్పుడు రైతులు చేసే 5 తప్పులు", short: "నాణ్యత, స్పేసింగ్, ఫిల్టర్ వంటి సాధారణ తప్పులు మరియు నివారణ.", img: "https://agritools-bazaar.lovable.app/assets/flat-drip-BIT5Ge41.jpg", body: "<p class='telugu'>1. నాణ్యత లేని పైప్ కొనడం 2. తప్పు స్పేసింగ్ 3. ఫిల్టర్ లేకుండా వాడటం 4. లేఅవుట్ లేకుండా అమర్చడం 5. నిర్వహణ మరచిపోవడం. ఈ తప్పులు నీటి వృథా మరియు అధిక ఖర్చుకు దారితీస్తాయి.</p><p>Ask us before buying so we can guide on quality and correct setup.</p>" },
-      { id: "b2222222-2222-4222-8222-222222222204", title: "Sprinkler Irrigation రైతులకు ఎప్పుడు ఉపయోగకరం?", short: "స్ప్రింక్లర్ / రైన్ గన్ ఎప్పుడు సరిపోతుందో తెలుసుకోండి.", img: "https://agritools-bazaar.lovable.app/assets/sprinkler-CbqB-5Gk.jpg", body: "<p class='telugu'>స్ప్రింక్లర్ ఇరిగేషన్ కొన్ని పంటలకు, సాపేక్షంగా సమాన భూమికి మరియు నీటి ఒత్తిడి ఉన్నప్పుడు ఉపయోగకరం. రైన్ గన్స్ పెద్ద ప్రాంతాలకు సరిపోతాయి. డ్రిప్ తో పోలిస్తే నీటి వినియోగం ఎక్కువ కావచ్చు – పంట మరియు నీటి లభ్యత చూసి నిర్ణయించండి.</p>" },
-      { id: "b2222222-2222-4222-8222-222222222205", title: "Drip Irrigation Subsidy గురించి రైతులు తెలుసుకోవాల్సిన విషయాలు", short: "సబ్సిడీ పథకాలు, దరఖాస్తు మరియు గమనించాల్సిన విషయాలు.", img: "https://agritools-bazaar.lovable.app/assets/hero-farmer-3oGNTqbU.jpg", body: "<p class='telugu'>తెలంగాణ మరియు ఆంధ్రప్రదేశ్‌లో మైక్రో ఇరిగేషన్ సబ్సిడీ పథకాలు అందుబాటులో ఉంటాయి. అర్హత, శాతం మరియు పత్రాలు ప్రభుత్వ నిబంధనలపై ఆధారపడి ఉంటాయి. మేము స్కీమ్ గైడెన్స్, డాక్యుమెంట్ జాబితా మరియు సిస్టమ్ ఎంపికలో సహాయం చేస్తాము. ఏ శాతం సబ్సిడీ వస్తుందో హామీ ఇవ్వము – అధికారిక మార్గదర్శకాలను అనుసరించండి.</p>" }
-    ];
-
-    const WA_BASE = "https://wa.me/919849735864?text=";
-
-    // ========== SUPABASE BACKEND ==========
-    const SUPABASE_URL = "https://gfninjrbkdcwnkvqsouj.supabase.co";
-    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdmbmluanJia2Rjd25rdnFzb3VqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAxMjg3MDUsImV4cCI6MjEwNTcwNDcwNX0.se1z7HumhOuZnD0FPvHUNzFo6pSY87aELVxmse0KdPM";
-    const BUCKET = "product-images";
-    const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-    let CACHE = null;      // products; null => table empty, show default products
-    let BLOG_CACHE = null; // blog posts; null => table empty/missing, show default blogs
-    let session = null;
-    let editingId = null;
-    let editingBlogId = null;
-
-    const fromRow = r => ({
-      id: r.id, name: r.name, desc: r.description || "",
-      price: r.price || "Contact for Price", image: r.image_url || "",
-      category: r.category || "Other", featured: r.featured !== false
-    });
-    const toRow = p => ({
-      id: p.id, name: p.name, description: p.desc, price: p.price,
-      image_url: p.image || null, category: p.category, featured: p.featured
-    });
-
-    const blogFromRow = r => ({
-      id: r.id, title: r.title, short: r.short_desc || "",
-      img: r.image_url || "", body: r.body || ""
-    });
-    const blogToRow = b => ({
-      id: b.id, title: b.title, short_desc: b.short, image_url: b.img || null, body: b.body
-    });
-
-    function getProducts() {
-      return CACHE ? CACHE.slice() : JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
-    }
-    function getBlogs() {
-      return BLOG_CACHE ? BLOG_CACHE.slice() : JSON.parse(JSON.stringify(DEFAULT_BLOGS));
-    }
-
-    async function loadProductsFromServer() {
-      const { data, error } = await sb.from("products").select("*").order("created_at", { ascending: true });
-      CACHE = (!error && data && data.length) ? data.map(fromRow) : null;
-      renderProducts();
-      if (document.getElementById("adminPanel").classList.contains("open") && session) renderAdminList();
-    }
-
-    async function loadBlogsFromServer() {
-      const { data, error } = await sb.from("blog_posts").select("*").order("created_at", { ascending: true });
-      BLOG_CACHE = (!error && data && data.length) ? data.map(blogFromRow) : null;
-      renderBlogs();
-      if (document.getElementById("adminPanel").classList.contains("open") && session) renderBlogAdminList();
-    }
-
-    // First save on an empty table: seed default products/blogs too, so nothing disappears
-    async function seedIfEmpty() {
-      if (CACHE !== null) return;
-      const { error } = await sb.from("products").upsert(DEFAULT_PRODUCTS.map(toRow));
-      if (error) throw error;
-      CACHE = DEFAULT_PRODUCTS.map(p => ({ ...p }));
-    }
-    async function seedBlogsIfEmpty() {
-      if (BLOG_CACHE !== null) return;
-      const { error } = await sb.from("blog_posts").upsert(DEFAULT_BLOGS.map(blogToRow));
-      if (error) throw error;
-      BLOG_CACHE = DEFAULT_BLOGS.map(b => ({ ...b }));
-    }
-
-    // ---- Photo: resize (phone photos are huge) + upload ----
-    function compressImage(file) {
-      return new Promise((res, rej) => {
-        const img = new Image(), url = URL.createObjectURL(file);
-        img.onload = () => {
-          const s = Math.min(1, 1000 / Math.max(img.width, img.height));
-          const c = document.createElement("canvas");
-          c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
-          c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
-          c.toBlob(b => { URL.revokeObjectURL(url); b ? res(b) : rej(new Error("Image error")); }, "image/jpeg", 0.82);
-        };
-        img.onerror = () => rej(new Error("ఈ ఫోటో తెరవలేకపోయాం / Cannot read this image"));
-        img.src = url;
-      });
-    }
-    async function uploadImage(file) {
-      const blob = await compressImage(file);
-      const path = Date.now() + "-" + Math.random().toString(36).slice(2, 8) + ".jpg";
-      const { error } = await sb.storage.from(BUCKET).upload(path, blob, { contentType: "image/jpeg" });
-      if (error) throw error;
-      return sb.storage.from(BUCKET).getPublicUrl(path).data.publicUrl;
-    }
-
-    // ========== RENDER ==========
-    function renderCategories() {
-      const grid = document.getElementById("categoriesGrid");
-      grid.innerHTML = CATEGORIES.map(c => `
-        <a href="#products" class="cat-card">
-          <img src="${c.img}" alt="${c.name}" loading="lazy" width="200" height="110">
-          <h3>${c.name}</h3>
-        </a>
-      `).join("");
-    }
-
-    function waLink(productName) {
-      const msg = encodeURIComponent("నమస్కారం AgriToolsIndia, నాకు " + productName + " గురించి ధర మరియు వివరాలు కావాలి.");
-      return WA_BASE + msg;
-    }
-
-    function renderProducts() {
-      const products = getProducts();
-      const grid = document.getElementById("productsGrid");
-      const list = products.filter(p => p.featured !== false);
-      grid.innerHTML = list.map(p => `
-        <article class="product-card">
-          <img src="${p.image || 'https://agritools-bazaar.lovable.app/assets/flat-drip-BIT5Ge41.jpg'}" alt="${p.name}" loading="lazy" width="300" height="170">
-          <div class="product-body">
-            <h3>${p.name}</h3>
-            <p class="desc">${p.desc || ""}</p>
-            <div class="product-price">${p.price || "Contact for Price"}</div>
-            <a href="${waLink(p.name)}" class="product-wa" target="_blank" rel="noopener">💬 Enquire on WhatsApp</a>
-          </div>
-        </article>
-      `).join("");
-    }
-
-    function renderBlogs() {
-      const blogs = getBlogs();
-      const grid = document.getElementById("blogGrid");
-      grid.innerHTML = blogs.map(b => `
-        <article class="blog-card">
-          <img src="${b.img || 'https://agritools-bazaar.lovable.app/assets/hero-farmer-3oGNTqbU.jpg'}" alt="" loading="lazy" width="400" height="150">
-          <div class="blog-body">
-            <h3 class="telugu">${b.title}</h3>
-            <p class="telugu">${b.short}</p>
-            <a href="javascript:void(0)" class="read-more" onclick="openBlog('${b.id}')">Read More →</a>
-          </div>
-        </article>
-      `).join("");
-    }
-
-    function openBlog(id) {
-      const b = getBlogs().find(x => x.id === id);
-      if (!b) return;
-      document.getElementById("blogModalTitle").textContent = b.title;
-      document.getElementById("blogModalBody").innerHTML = b.body;
-      document.getElementById("blogModal").classList.add("open");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeBlog() {
-      document.getElementById("blogModal").classList.remove("open");
-      document.body.style.overflow = "";
-    }
-
-    // ========== WELCOME OFFER POPUP ==========
-    function showOfferPopup() {
-      document.getElementById("offerPopup").classList.add("open");
-    }
-    function closeOfferPopup() {
-      document.getElementById("offerPopup").classList.remove("open");
-      try { sessionStorage.setItem("offerPopupShown", "1"); } catch (e) {}
-    }
-
-    // ========== CONTACT FORM → WhatsApp ==========
-    function submitContact(e) {
-      e.preventDefault();
-      const name = document.getElementById("cname").value.trim();
-      const mobile = document.getElementById("cmobile").value.trim();
-      const district = document.getElementById("cdistrict").value.trim();
-      const req = document.getElementById("creq").value;
-      const msg = document.getElementById("cmsg").value.trim();
-      let text = "నమస్కారం AgriToolsIndia,\n";
-      text += "Name: " + name + "\n";
-      text += "Mobile: " + mobile + "\n";
-      if (district) text += "District: " + district + "\n";
-      if (req) text += "Requirement: " + req + "\n";
-      if (msg) text += "Message: " + msg;
-      window.open(WA_BASE + encodeURIComponent(text), "_blank");
-      return false;
-    }
-
-    // ========== ADMIN: shared ==========
-    function preview(inputEl, imgEl, url) {
-      imgEl.src = url || ""; imgEl.style.display = url ? "block" : "none";
-    }
-
-    async function openAdmin() {
-      document.getElementById("adminPanel").classList.add("open");
-      document.body.style.overflow = "hidden";
-      const { data } = await sb.auth.getSession();
-      session = data.session;
-      refreshAdminView();
-    }
-
-    function closeAdmin() {
-      document.getElementById("adminPanel").classList.remove("open");
-      document.body.style.overflow = "";
-      resetAdminForm();
-      resetBlogForm();
-    }
-
-    function refreshAdminView() {
-      const on = !!session;
-      document.getElementById("loginBox").style.display = on ? "none" : "block";
-      document.getElementById("adminLoggedIn").style.display = on ? "block" : "none";
-      if (on) {
-        renderAdminList(); resetAdminForm();
-        renderBlogAdminList(); resetBlogForm();
-      }
-    }
-
-    function switchAdminTab(tab) {
-      document.getElementById("tabProducts").classList.toggle("active", tab === "products");
-      document.getElementById("tabBlog").classList.toggle("active", tab === "blog");
-      document.getElementById("tabProductsBtn").classList.toggle("active", tab === "products");
-      document.getElementById("tabBlogBtn").classList.toggle("active", tab === "blog");
-    }
-
-    // ========== ADMIN: PRODUCTS ==========
-    function resetAdminForm() {
-      editingId = null;
-      document.getElementById("editId").value = "";
-      document.getElementById("pName").value = "";
-      document.getElementById("pDesc").value = "";
-      document.getElementById("pPrice").value = "";
-      document.getElementById("pImage").value = "";
-      document.getElementById("pFile").value = "";
-      preview(null, document.getElementById("pPreview"), "");
-      document.getElementById("pCategory").selectedIndex = 0;
-      document.getElementById("pFeatured").checked = true;
-      document.getElementById("deleteBtn").style.display = "none";
-    }
-
-    function renderAdminList() {
-      const list = getProducts();
-      const el = document.getElementById("adminList");
-      el.innerHTML = "<h3 style='margin-bottom:10px;'>Current Products</h3>" + list.map(p => `
-        <div class="admin-list-item">
-          <span><strong>${p.name}</strong> – ${p.price || "Contact for Price"}</span>
-          <button type="button" class="btn-admin btn-save" style="padding:6px 12px;font-size:0.8rem;" onclick="editProduct('${p.id}')">Edit</button>
-        </div>
-      `).join("");
-    }
-
-    function editProduct(id) {
-      const list = getProducts();
-      const p = list.find(x => x.id === id);
-      if (!p) return;
-      editingId = id;
-      document.getElementById("editId").value = id;
-      document.getElementById("pName").value = p.name || "";
-      document.getElementById("pDesc").value = p.desc || "";
-      document.getElementById("pPrice").value = p.price || "";
-      document.getElementById("pImage").value = p.image || "";
-      document.getElementById("pFile").value = "";
-      preview(null, document.getElementById("pPreview"), p.image || "");
-      document.getElementById("pCategory").value = p.category || "Other";
-      document.getElementById("pFeatured").checked = p.featured !== false;
-      document.getElementById("deleteBtn").style.display = "inline-block";
-      document.getElementById("adminForm").scrollIntoView({ behavior: "smooth" });
-    }
-
-    async function saveProduct(e) {
-      e.preventDefault();
-      if (!session) { alert("ముందు Login చేయండి"); return false; }
-      const btn = e.target.querySelector('button[type="submit"]');
-      btn.disabled = true; btn.textContent = "Saving...";
-      try {
-        await seedIfEmpty();
-        let image = document.getElementById("pImage").value.trim();
-        const file = document.getElementById("pFile").files[0];
-        if (file) image = await uploadImage(file);
-        const row = {
-          name: document.getElementById("pName").value.trim(),
-          description: document.getElementById("pDesc").value.trim(),
-          price: document.getElementById("pPrice").value.trim() || "Contact for Price",
-          image_url: image || null,
-          category: document.getElementById("pCategory").value,
-          featured: document.getElementById("pFeatured").checked
-        };
-        if (editingId) row.id = editingId;
-        const { error } = await sb.from("products").upsert(row);
-        if (error) throw error;
-        await loadProductsFromServer();
-        renderAdminList(); resetAdminForm();
-        alert("Saved ✅ / సేవ్ అయింది");
-      } catch (err) {
-        alert("Error: " + (err.message || err));
-      } finally {
-        btn.disabled = false; btn.textContent = "Save Product";
-      }
-      return false;
-    }
-
-    async function deleteCurrentProduct() {
-      if (!editingId || !session) return;
-      if (!confirm("Delete this product?")) return;
-      try {
-        await seedIfEmpty();
-        const { error } = await sb.from("products").delete().eq("id", editingId);
-        if (error) throw error;
-        await loadProductsFromServer();
-        renderAdminList(); resetAdminForm();
-      } catch (err) { alert("Error: " + (err.message || err)); }
-    }
-
-    // ========== ADMIN: BLOG POSTS ==========
-    function resetBlogForm() {
-      editingBlogId = null;
-      document.getElementById("editBlogId").value = "";
-      document.getElementById("bTitle").value = "";
-      document.getElementById("bShort").value = "";
-      document.getElementById("bBody").value = "";
-      document.getElementById("bImage").value = "";
-      document.getElementById("bFile").value = "";
-      preview(null, document.getElementById("bPreview"), "");
-      document.getElementById("deleteBlogBtn").style.display = "none";
-    }
-
-    function renderBlogAdminList() {
-      const list = getBlogs();
-      const el = document.getElementById("blogAdminList");
-      el.innerHTML = "<h3 style='margin-bottom:10px;'>Current Blog Posts</h3>" + list.map(b => `
-        <div class="admin-list-item">
-          <span><strong>${b.title}</strong></span>
-          <button type="button" class="btn-admin btn-save" style="padding:6px 12px;font-size:0.8rem;" onclick="editBlog('${b.id}')">Edit</button>
-        </div>
-      `).join("");
-    }
-
-    function editBlog(id) {
-      const b = getBlogs().find(x => x.id === id);
-      if (!b) return;
-      editingBlogId = id;
-      document.getElementById("editBlogId").value = id;
-      document.getElementById("bTitle").value = b.title || "";
-      document.getElementById("bShort").value = b.short || "";
-      document.getElementById("bBody").value = b.body || "";
-      document.getElementById("bImage").value = b.img || "";
-      document.getElementById("bFile").value = "";
-      preview(null, document.getElementById("bPreview"), b.img || "");
-      document.getElementById("deleteBlogBtn").style.display = "inline-block";
-      document.getElementById("blogForm").scrollIntoView({ behavior: "smooth" });
-    }
-
-    async function saveBlog(e) {
-      e.preventDefault();
-      if (!session) { alert("ముందు Login చేయండి"); return false; }
-      const btn = e.target.querySelector('button[type="submit"]');
-      btn.disabled = true; btn.textContent = "Saving...";
-      try {
-        await seedBlogsIfEmpty();
-        let image = document.getElementById("bImage").value.trim();
-        const file = document.getElementById("bFile").files[0];
-        if (file) image = await uploadImage(file);
-        const row = {
-          title: document.getElementById("bTitle").value.trim(),
-          short_desc: document.getElementById("bShort").value.trim(),
-          body: document.getElementById("bBody").value.trim(),
-          image_url: image || null
-        };
-        if (editingBlogId) row.id = editingBlogId;
-        const { error } = await sb.from("blog_posts").upsert(row);
-        if (error) throw error;
-        await loadBlogsFromServer();
-        renderBlogAdminList(); resetBlogForm();
-        alert("Saved ✅ / సేవ్ అయింది");
-      } catch (err) {
-        alert("Error: " + (err.message || err) + (String(err.message||"").includes("blog_posts") ? "\n\n(Supabase లో 'blog_posts' టేబుల్ లేకపోతే, దాన్ని ముందు క్రియేట్ చేయాలి — columns: id uuid, title text, short_desc text, body text, image_url text, created_at timestamp)" : ""));
-      } finally {
-        btn.disabled = false; btn.textContent = "Save Blog Post";
-      }
-      return false;
-    }
-
-    async function deleteCurrentBlog() {
-      if (!editingBlogId || !session) return;
-      if (!confirm("Delete this blog post?")) return;
-      try {
-        await seedBlogsIfEmpty();
-        const { error } = await sb.from("blog_posts").delete().eq("id", editingBlogId);
-        if (error) throw error;
-        await loadBlogsFromServer();
-        renderBlogAdminList(); resetBlogForm();
-      } catch (err) { alert("Error: " + (err.message || err)); }
-    }
-
-    document.getElementById("pFile").addEventListener("change", e => {
-      const f = e.target.files[0];
-      if (f) preview(null, document.getElementById("pPreview"), URL.createObjectURL(f));
-    });
-    document.getElementById("bFile").addEventListener("change", e => {
-      const f = e.target.files[0];
-      if (f) preview(null, document.getElementById("bPreview"), URL.createObjectURL(f));
-    });
-
-    document.getElementById("loginBtn").addEventListener("click", async () => {
-      const { data, error } = await sb.auth.signInWithPassword({
-        email: document.getElementById("lEmail").value.trim(),
-        password: document.getElementById("lPass").value
-      });
-      if (error) { alert("Login failed: " + error.message); return; }
-      session = data.session;
-      document.getElementById("lPass").value = "";
-      refreshAdminView();
-    });
-
-    document.getElementById("logoutBtn").addEventListener("click", async () => {
-      await sb.auth.signOut();
-      session = null;
-      refreshAdminView();
-    });
-
-    // ========== MOBILE MENU ==========
-    const hamburger = document.getElementById("hamburger");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    hamburger.addEventListener("click", () => {
-      const open = mobileMenu.classList.toggle("open");
-      hamburger.classList.toggle("open", open);
-      hamburger.setAttribute("aria-expanded", open);
-      document.body.style.overflow = open ? "hidden" : "";
-    });
-
-    document.querySelectorAll(".mob-link").forEach(a => {
-      a.addEventListener("click", () => {
-        mobileMenu.classList.remove("open");
-        hamburger.classList.remove("open");
-        hamburger.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
+    list.querySelectorAll('.btn-delete').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        if (!confirm('ఈ ప్రొడక్ట్‌ను తొలగించాలా?')) return;
+        const id = btn.dataset.id;
+        const { error } = await supabase.from('products').delete().eq('id', id);
+        if (error) { alert('Error: ' + error.message); return; }
+        loadProducts();
+        loadAdminList();
       });
     });
 
-    // ========== BOTTOM APP NAV: active state on scroll + click ==========
-    (function() {
-      const bnLinks = Array.from(document.querySelectorAll(".bn-link"));
-      bnLinks.forEach(a => {
-        a.addEventListener("click", () => {
-          bnLinks.forEach(x => x.classList.remove("active"));
-          a.classList.add("active");
-        });
+    list.querySelectorAll('.btn-edit').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const id = btn.dataset.id;
+        const row = data.find(p => p.id === id);
+        const newName = prompt('Product Name', row.name);
+        if (newName === null) return;
+        const newPrice = prompt('Price', row.price || '');
+        const newDesc = prompt('Description', row.description || '');
+        const { error } = await supabase.from('products')
+          .update({ name: newName, price: newPrice, description: newDesc })
+          .eq('id', id);
+        if (error) { alert('Error: ' + error.message); return; }
+        loadProducts();
+        loadAdminList();
       });
-      const sectionIds = ["home", "products", "blog", "contact"];
-      const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
-      if ("IntersectionObserver" in window && sections.length) {
-        const obs = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const id = entry.target.id;
-              bnLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + id));
-            }
-          });
-        }, { rootMargin: "-40% 0px -50% 0px" });
-        sections.forEach(s => obs.observe(s));
-      }
-    })();
-
-    // Logo 3 clicks → open admin (login form shown, password check via Supabase auth)
-    (function() {
-      let logoClicks = 0;
-      let logoTimer = null;
-      const logoEl = document.querySelector(".logo");
-      if (logoEl) {
-        logoEl.addEventListener("click", function(e) {
-          logoClicks++;
-          if (logoTimer) clearTimeout(logoTimer);
-          if (logoClicks >= 3) {
-            e.preventDefault();
-            logoClicks = 0;
-            openAdmin();
-            return;
-          }
-          logoTimer = setTimeout(function() { logoClicks = 0; }, 800);
-        });
-      }
-    })();
-
-    document.getElementById("blogModal").addEventListener("click", function(e) {
-      if (e.target === this) closeBlog();
     });
-    document.getElementById("adminPanel").addEventListener("click", function(e) {
-      if (e.target === this) closeAdmin();
-    });
-    document.getElementById("offerPopup").addEventListener("click", function(e) {
-      if (e.target === this) closeOfferPopup();
-    });
+  }
+</script>
 
-    // ========== INIT ==========
-    renderCategories();
-    renderProducts();
-    renderBlogs();
-    loadProductsFromServer();
-    loadBlogsFromServer();
-
-    // Show the 1-Acre Drip Kit offer popup on first load of this browser session
-    (function() {
-      let already = false;
-      try { already = sessionStorage.getItem("offerPopupShown") === "1"; } catch (e) {}
-      if (!already) setTimeout(showOfferPopup, 900);
-    })();
-  </script>
 </body>
 </html>
