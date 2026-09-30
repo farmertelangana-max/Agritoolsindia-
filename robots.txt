@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://farmertelangana-max.github.io/Agritoolsindia-/sitemap.xml
