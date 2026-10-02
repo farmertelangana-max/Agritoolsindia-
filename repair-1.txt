@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Drip Repair & Maintenance Telangana & Andhra Pradesh | డ్రిప్ రిపేర్ సర్వీస్ | AgriToolsIndia</title>
+  <meta name="description" content="డ్రిప్ పైప్ లీకేజీ, డ్రిప్పర్ బ్లాక్, ఫిట్టింగ్స్ రిపేర్ - తెలంగాణ & ఆంధ్రప్రదేశ్ రైతులకు Drip Repair & Maintenance Service. AgriToolsIndia, Kukatpally, Hyderabad. WhatsApp: 98497 35864.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://farmertelangana-max.github.io/Agritoolsindia-/repair.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Drip Repair & Maintenance | డ్రిప్ రిపేర్ సర్వీస్ - AgriToolsIndia">
+  <meta property="og:description" content="లీకేజీ, డ్రిప్పర్ బ్లాక్, ఫిట్టింగ్స్ - మీ డ్రిప్ మళ్ళీ బాగా పని చేసేలా. తెలంగాణ & ఆంధ్రప్రదేశ్.">
+  <meta property="og:image" content="https://farmertelangana-max.github.io/Agritoolsindia-/images/logo.png">
+  <meta property="og:locale" content="te_IN">
+  <meta property="og:url" content="https://farmertelangana-max.github.io/Agritoolsindia-/repair.html">
+  <link rel="icon" type="image/png" href="images/favicon-192.png">
+  <link rel="apple-touch-icon" href="images/favicon-192.png">
+  <meta name="theme-color" content="#1b5e20">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Drip Irrigation Repair & Maintenance",
+    "serviceType": "Drip irrigation repair and maintenance",
+    "description": "Drip pipe leakage repair, dripper blockage cleaning, fittings replacement and maintenance for farmers in Telangana and Andhra Pradesh.",
+    "url": "https://farmertelangana-max.github.io/Agritoolsindia-/repair.html",
+    "areaServed": ["Telangana", "Andhra Pradesh"],
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "AgriToolsIndia",
+      "url": "https://farmertelangana-max.github.io/Agritoolsindia-/",
+      "telephone": "+919849735864",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kukatpally, Hyderabad",
+        "addressRegion": "Telangana",
+        "addressCountry": "IN"
+      }
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --green-900:#1b5e20; --green-800:#2e7d32; --green-700:#388e3c; --green-100:#e8f5e9; --green-50:#f1f8e9;
+      --whatsapp:#25d366; --text:#1a1a1a; --muted:#555; --border:#e0e0e0;
+      --shadow:0 4px 20px rgba(0,0,0,0.08); --radius:14px; --header-h:64px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter','Noto Sans Telugu',system-ui,sans-serif;color:var(--text);background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased;padding-bottom:70px}
+    img{max-width:100%;height:auto;display:block}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:0 auto}
+    .telugu{font-family:'Noto Sans Telugu',sans-serif}
+    .header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.08);height:var(--header-h)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;height:100%;gap:12px}
+    .logo{font-weight:700;font-size:1.15rem;color:var(--green-900);display:flex;align-items:center;gap:8px;white-space:nowrap}
+    .logo-img{width:40px;height:40px;object-fit:contain}
+    .header-actions{display:flex;gap:8px}
+    .btn-call,.btn-wa{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:999px;font-size:.85rem;font-weight:600;color:#fff}
+    .btn-call{background:var(--green-800)} .btn-wa{background:var(--whatsapp)}
+    .hero{background:linear-gradient(135deg,rgba(27,94,32,.9),rgba(46,125,50,.8)),url('images/hero-farmer.jpg') center/cover no-repeat;color:#fff;padding:48px 0 52px}
+    .hero-content{max-width:680px}
+    .hero-tag{display:inline-block;background:rgba(255,255,255,.2);padding:6px 14px;border-radius:999px;font-size:.9rem;margin-bottom:14px}
+    .hero h1{font-size:clamp(1.55rem,4.5vw,2.35rem);line-height:1.4;margin-bottom:10px;font-weight:700}
+    .hero .en-sub{font-size:1.05rem;opacity:.95;margin-bottom:18px}
+    .hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    .btn-primary{background:#fff;color:var(--green-900);padding:14px 22px;border-radius:999px;font-weight:700;font-size:.95rem;display:inline-flex;align-items:center;gap:8px}
+    .btn-outline{border:2px solid rgba(255,255,255,.85);color:#fff;padding:12px 20px;border-radius:999px;font-weight:600;font-size:.95rem;display:inline-flex;align-items:center;gap:8px}
+    .btn-book{background:#00c853;color:#fff;padding:15px 24px;border-radius:999px;font-weight:700;font-size:1rem;display:inline-flex;align-items:center;gap:8px;border:2px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+    section{padding:48px 0}
+    .section-title{text-align:center;margin-bottom:28px}
+    .section-title h2{font-size:clamp(1.3rem,3.5vw,1.8rem);color:var(--green-900);line-height:1.4}
+    .section-title p{color:var(--muted);max-width:560px;margin:6px auto 0}
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+    .card .ic{font-size:1.8rem;margin-bottom:8px}
+    .card h3{color:var(--green-800);font-size:1.1rem;margin-bottom:6px;line-height:1.4}
+    .card p{color:var(--muted);font-size:.95rem}
+    .alt{background:var(--green-50)}
+    .steps{counter-reset:s;display:grid;gap:14px}
+    .step{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+    .step::before{counter-increment:s;content:counter(s);flex:0 0 36px;height:36px;border-radius:50%;background:var(--green-800);color:#fff;display:grid;place-items:center;font-weight:700}
+    .step b{display:block;color:var(--green-900)}
+    .faq details{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;margin-bottom:10px}
+    .faq summary{cursor:pointer;font-weight:600;color:var(--green-900)}
+    .faq p{margin-top:8px;color:var(--muted)}
+    .cta{background:linear-gradient(135deg,var(--green-900),var(--green-700));color:#fff;text-align:center;border-radius:var(--radius);padding:32px 20px}
+    .cta h2{font-size:1.4rem;line-height:1.5;margin-bottom:8px}
+    .cta .phone{font-size:1.6rem;font-weight:700;color:#ffeb3b;display:block;margin:10px 0}
+    .cta .hero-btns{justify-content:center}
+    .footer{background:#1b2a1c;color:#cfd8cf;padding:28px 0;text-align:center;font-size:.9rem}
+    .footer a{color:#fff;text-decoration:underline}
+    .bottom-nav{position:fixed;left:0;right:0;bottom:0;height:60px;background:#fff;border-top:1px solid var(--border);display:flex;z-index:1000}
+    .bottom-nav a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:.72rem;font-weight:600;color:var(--muted);gap:2px}
+    .bottom-nav .bn-wa{color:var(--whatsapp)}
+    .bottom-nav .bn-icon{font-size:1.25rem;line-height:1}
+    @media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr)}.bottom-nav{display:none}body{padding-bottom:0}}
+    @media(max-width:520px){.btn-call span,.btn-wa span{display:none}.hero-btns{flex-direction:column}.btn-primary,.btn-outline,.btn-book{width:100%;justify-content:center}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img class="logo-img" src="images/logo.png" alt="AgriToolsIndia logo" width="40" height="40">
+        AgriToolsIndia
+      </a>
+      <div class="header-actions">
+        <a href="tel:+919849735864" class="btn-call" aria-label="Call Now">📞 <span>98497 35864</span></a>
+        <a href="https://wa.me/919849735864" class="btn-wa" target="_blank" rel="noopener" aria-label="WhatsApp">💬 <span>WhatsApp</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding:48px 0 52px">
+      <div class="container hero-content">
+        <div class="hero-tag telugu">రైతు కోసం • రైతు పొలం కోసం</div>
+        <h1 class="telugu">డ్రిప్ రిపేర్ &amp; మెయింటెనెన్స్ సర్వీస్ – తెలంగాణ &amp; ఆంధ్రప్రదేశ్</h1>
+        <p class="en-sub telugu">మీ డ్రిప్ లో లీకేజీనా? డ్రిప్పర్లు బ్లాక్ అయ్యాయా? మేము చూసి సరిచేస్తాం. నీరు వృథా కాదు, పంట ఎండదు.</p>
+        <div class="hero-btns">
+          <a href="book.html" class="btn-book telugu">📅 ఆన్‌లైన్‌లో బుక్ చేయండి</a>
+          <a href="https://wa.me/919849735864" class="btn-primary telugu" target="_blank" rel="noopener">💬 WhatsAppలో చెప్పండి</a>
+          <a href="tel:+919849735864" class="btn-outline telugu">📞 కాల్ చేయండి: 98497 35864</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2 class="telugu">ఏ సమస్యలకు రిపేర్ చేస్తాం?</h2>
+          <p class="telugu">డ్రిప్ సరిగా పని చేయకపోతే ఈ సమస్యలలో ఏదో ఒకటి ఉంటుంది.</p>
+        </div>
+        <div class="grid">
+          <div class="card"><div class="ic">💧</div><h3 class="telugu">పైప్ లీకేజీ</h3><p class="telugu">పగిలిన లేదా కారుతున్న డ్రిప్ పైప్ లను సరిచేస్తాం.</p></div>
+          <div class="card"><div class="ic">🚫</div><h3 class="telugu">డ్రిప్పర్ బ్లాకేజ్</h3><p class="telugu">మూసుకుపోయిన డ్రిప్పర్లను శుభ్రం చేయడం లేదా మార్చడం.</p></div>
+          <div class="card"><div class="ic">🔧</div><h3 class="telugu">ఫిట్టింగ్స్ రిపేర్</h3><p class="telugu">జాయినర్లు, ఎండ్ క్యాప్స్, వాల్వ్ లు, కనెక్టర్లు మార్చడం.</p></div>
+          <div class="card"><div class="ic">🧪</div><h3 class="telugu">ఫిల్టర్ శుభ్రం</h3><p class="telugu">ఫిల్టర్ లో మట్టి, ఇసుక చేరితే శుభ్రం చేసి సరిచేస్తాం.</p></div>
+          <div class="card"><div class="ic">🌱</div><h3 class="telugu">నీరు సమానంగా రావడం</h3><p class="telugu">కొన్ని మొక్కలకు ఎక్కువ, కొన్నింటికి తక్కువ నీరు వస్తోందా? చెక్ చేసి సరిచేస్తాం.</p></div>
+          <div class="card"><div class="ic">📋</div><h3 class="telugu">రెగ్యులర్ మెయింటెనెన్స్</h3><p class="telugu">సీజన్ ముందు మొత్తం డ్రిప్ సిస్టమ్ చెక్ చేసి సిద్ధం చేస్తాం.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="telugu">ఎలా పని చేస్తుంది?</h2>
+          <p class="telugu">చాలా సులభం – 3 స్టెప్స్.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="telugu"><b>WhatsApp లేదా కాల్ చేయండి</b>సమస్య ఏమిటో చెప్పండి. ఫోటో లేదా వీడియో పంపితే ఇంకా మంచిది.</div></div>
+          <div class="step"><div class="telugu"><b>మీ గ్రామం &amp; పొలం వివరాలు ఇవ్వండి</b>ఎన్ని ఎకరాలు, ఏ పంట, ఏ ఊరు – ఇవి చెప్పండి.</div></div>
+          <div class="step"><div class="telugu"><b>రిపేర్ సర్వీస్</b>మా టీమ్ వివరాలు చెప్పి, సమయం ఇచ్చి రిపేర్ చేస్తుంది. వివరాలకు WhatsApp చేయండి.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2 class="telugu">AgriToolsIndia ఎందుకు?</h2>
+        </div>
+        <div class="grid">
+          <div class="card"><div class="ic">✅</div><h3 class="telugu">రైతుకు అర్థమయ్యే సర్వీస్</h3><p class="telugu">సులభమైన మాటల్లో సమస్య, పరిష్కారం చెబుతాం.</p></div>
+          <div class="card"><div class="ic">📍</div><h3 class="telugu">తెలంగాణ &amp; ఆంధ్రప్రదేశ్</h3><p class="telugu">రెండు రాష్ట్రాల రైతులకు సేవ. Kukatpally, Hyderabad.</p></div>
+          <div class="card"><div class="ic">🛒</div><h3 class="telugu">కొత్త డ్రిప్ కూడా</h3><p class="telugu">1 ఎకరం డ్రిప్ కిట్, లపేట పైప్, 16mm ఫ్లాట్ డ్రిప్ 1000m రోల్స్ – ధరల కోసం WhatsApp చేయండి. <a href="index.html#products" style="color:var(--green-800);text-decoration:underline">ఉత్పత్తులు చూడండి</a></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq alt">
+      <div class="container" style="max-width:760px">
+        <div class="section-title"><h2 class="telugu">తరచుగా అడిగే ప్రశ్నలు</h2></div>
+        <details><summary class="telugu">డ్రిప్ రిపేర్ సర్వీస్ ఏ ప్రాంతాల్లో ఉంది?</summary><p class="telugu">తెలంగాణ మరియు ఆంధ్రప్రదేశ్ లో. మీ ఊరు WhatsApp లో చెప్పండి, మేము చెబుతాం.</p></details>
+        <details><summary class="telugu">వేరే కంపెనీ డ్రిప్ కూడా రిపేర్ చేస్తారా?</summary><p class="telugu">మీ సమస్య ఫోటో/వీడియో WhatsApp లో పంపండి. చూసి చెబుతాం.</p></details>
+        <details><summary class="telugu">రిపేర్ కి ఎంత అవుతుంది?</summary><p class="telugu">వివరాలకు WhatsApp చేయండి.</p></details>
+        <details><summary class="telugu">డ్రిప్పర్లు బ్లాక్ అవ్వకుండా ఏం చేయాలి?</summary><p class="telugu">ఫిల్టర్ ని రెగ్యులర్ గా శుభ్రం చేయండి, సీజన్ ముందు లేటరల్స్ ఫ్లష్ చేయండి. సందేహం ఉంటే మమ్మల్ని అడగండి.</p></details>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta">
+          <h2 class="telugu">మీ డ్రిప్ సమస్య ఈరోజే చెప్పండి</h2>
+          <p class="telugu">వివరాలకు WhatsApp చేయండి</p>
+          <a class="phone" href="tel:+919849735864">📞 98497 35864</a>
+          <div class="hero-btns">
+            <a href="https://wa.me/919849735864" class="btn-primary telugu" target="_blank" rel="noopener">💬 WhatsApp చేయండి</a>
+            <a href="index.html" class="btn-outline telugu">🏠 హోమ్ పేజీ</a>
+          </div>
+          <p class="telugu" style="margin-top:14px;opacity:.9">సేవా ప్రాంతం: Telangana &amp; Andhra Pradesh</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container telugu">
+      <p><b>AgriToolsIndia</b> – రైతు కోసం • రైతు పొలం కోసం</p>
+      <p>Kukatpally, Hyderabad • Telangana &amp; Andhra Pradesh</p>
+      <p style="margin-top:8px"><a href="index.html">హోమ్ పేజీ</a> • <a href="tel:+919849735864">98497 35864</a></p>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="Quick actions">
+    <a href="index.html"><span class="bn-icon">🏠</span>Home</a>
+    <a href="tel:+919849735864"><span class="bn-icon">📞</span>Call</a>
+    <a href="https://wa.me/919849735864" class="bn-wa" target="_blank" rel="noopener"><span class="bn-icon">💬</span>WhatsApp</a>
+  </nav>
+</body>
+</html>
