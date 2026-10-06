@@ -1,1 +1,4 @@
-https://agritoolsindia.shop/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://agritoolsindia.shop/sitemap.xml
