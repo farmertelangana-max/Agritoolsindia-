@@ -1652,7 +1652,7 @@
         </article>`;
       grid.innerHTML = kitCard + list.map(p => `
         <article class="product-card">
-          <img src="${p.image || 'images/flat-drip.jpg'}" alt="${p.name}" loading="lazy" width="300" height="170">
+          <img src="${p.image || 'images/flat-drip.jpg'}" alt="${p.name}" loading="lazy" width="300" height="170" onerror="this.onerror=null;this.src='images/logo.png';this.style.objectFit='contain';">
           <div class="product-body">
             <h3>${p.name}</h3>
             <p class="desc">${p.desc || ""}</p>
