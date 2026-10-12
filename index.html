@@ -1673,16 +1673,7 @@
     function renderBlogs() {
       const blogs = getBlogs();
       const grid = document.getElementById("blogGrid");
-      const guideCard = `
-        <article class="blog-card">
-          <img src="images/inline-drip.jpg" alt="డ్రిప్ ఇరిగేషన్ గైడ్" loading="lazy" width="400" height="150">
-          <div class="blog-body">
-            <h3 class="telugu">డ్రిప్ ఇరిగేషన్ (బిందు సేద్యం) గైడ్: తెలంగాణ, ఆంధ్రప్రదేశ్ రైతులకు పూర్తి సమాచారం</h3>
-            <p class="telugu">డ్రిప్ ఇరిగేషన్ అంటే ఏమిటి, లాభాలు, సరిపోయే పంటలు, ప్రభుత్వ సబ్సిడీ, నిర్వహణ జాగ్రత్తలు - సులభంగా తెలుసుకోండి.</p>
-            <a href="blog-drip-irrigation-guide.html" class="read-more">Read More →</a>
-          </div>
-        </article>`;
-      grid.innerHTML = guideCard + blogs.map(b => `
+      grid.innerHTML = blogs.map(b => `
         <article class="blog-card">
           <img src="${b.img || 'images/hero-farmer.jpg'}" alt="${(b.title||'').replace(/"/g,'&quot;')}" loading="lazy" width="400" height="150">
           <div class="blog-body">
